@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -10,49 +9,42 @@ const tools = [
   {
     name: "Google Search Console",
     logo: "/tools/google-search-console.svg",
+    alt: "Logo de Google Search Console"
   },
   {
-    name: "Google Analytics 4",
+    name: "Google Analytics",
     logo: "/tools/google-analytics.svg",
+    alt: "Logo de Google Analytics"
   },
   {
     name: "Google Tag Manager",
     logo: "/tools/google-tag-manager.svg",
-  },
-  {
-    name: "Google Site Kit",
-    logo: "/tools/google-site-kit.svg",
+    alt: "Logo de Google Tag Manager"
   },
   {
     name: "Ahrefs",
     logo: "/tools/ahrefs.svg",
+    alt: "Logo de Ahrefs"
   },
   {
     name: "Semrush",
     logo: "/tools/semrush.svg",
+    alt: "Logo de Semrush"
   },
   {
     name: "SearchAtlas",
     logo: "/tools/searchatlas.svg",
+    alt: "Logo de SearchAtlas"
   },
   {
     name: "LowFruits",
     logo: "/tools/lowfruits.svg",
+    alt: "Logo de LowFruits"
   }
 ];
 
 export const ToolsCarousel = () => {
-  const [api, setApi] = useState<any>(null);
-  const [imageErrors, setImageErrors] = useState<{[key: string]: string}>({});
   const plugin = Autoplay({ delay: 2000, stopOnInteraction: false });
-
-  useEffect(() => {
-    if (!api) return;
-
-    api.on("select", () => {
-      console.log("Slide changed");
-    });
-  }, [api]);
 
   return (
     <section className="py-16 bg-muted">
@@ -66,17 +58,6 @@ export const ToolsCarousel = () => {
           </p>
         </div>
 
-        {Object.keys(imageErrors).length > 0 && (
-          <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">
-            <h3 className="font-bold mb-2">Errores de carga de imágenes:</h3>
-            <ul className="list-disc pl-5">
-              {Object.entries(imageErrors).map(([logo, error]) => (
-                <li key={logo}>Error en {logo}: {error}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
         <Carousel
           opts={{
             align: "start",
@@ -84,7 +65,6 @@ export const ToolsCarousel = () => {
           }}
           plugins={[plugin]}
           className="w-full"
-          setApi={setApi}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {tools.map((tool, index) => (
@@ -93,18 +73,11 @@ export const ToolsCarousel = () => {
                   <div className="h-32 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                     <img
                       src={tool.logo}
-                      alt={`Logo de ${tool.name}`}
-                      className="h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
-                      onError={(e) => {
-                        const error = `No se pudo cargar la imagen (${tool.logo})`;
-                        setImageErrors(prev => ({
-                          ...prev,
-                          [tool.logo]: error
-                        }));
-                        e.currentTarget.style.display = 'none';
-                      }}
+                      alt={tool.alt}
+                      className="h-16 w-auto object-contain hover:scale-110 transition-transform duration-300"
                     />
                   </div>
+                  <p className="text-sm text-center mt-2 text-muted-foreground">{tool.name}</p>
                 </div>
               </CarouselItem>
             ))}
