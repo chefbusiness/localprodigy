@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, Globe, Code } from "lucide-react";
+import { Search, Globe, Code, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -22,6 +22,12 @@ const Services = () => {
       description: "Sitios web optimizados para SEO y conversión. Diseño responsive y velocidad de carga optimizada.",
       icon: Code,
       link: "/servicios/desarrollo-web"
+    },
+    {
+      title: "Publicidad Digital",
+      description: "Gestión profesional de campañas en Google Ads, Meta Ads, TikTok y Pinterest. Maximiza tu ROI con estrategias personalizadas.",
+      icon: Target,
+      link: "/servicios/publicidad-digital"
     }
   ];
 
@@ -33,7 +39,7 @@ const Services = () => {
           Soluciones digitales completas para hacer crecer tu negocio
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service) => (
             <Card key={service.title} className="hover:shadow-lg transition-shadow">
               <CardHeader>
