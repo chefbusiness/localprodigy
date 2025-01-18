@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const plans = [
   {
@@ -84,7 +90,6 @@ const LocalSEO = () => {
     <>
       <Header />
       <main className="min-h-screen bg-background">
-        {/* Hero Section - Updated with better visual hierarchy */}
         <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
@@ -115,8 +120,7 @@ const LocalSEO = () => {
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        
         <section className="py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
@@ -171,7 +175,6 @@ const LocalSEO = () => {
           </div>
         </section>
 
-        {/* Pricing Section with Enhanced Visual Design */}
         <section id="planes" className="py-24 bg-muted">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -262,6 +265,91 @@ const LocalSEO = () => {
               <Button variant="outline" size="lg" asChild>
                 <Link to="/contacto">Contacta con Nosotros</Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Importance of Local SEO Section */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6 text-center">
+                La Importancia del SEO Local en 2025
+              </h2>
+              <div className="prose prose-lg mx-auto text-muted-foreground">
+                <p className="mb-6">
+                  En 2025, el SEO local se ha convertido en una herramienta fundamental para la supervivencia y el crecimiento de las PYMEs. Con el 46% de las búsquedas en Google teniendo una intención local, y el 88% de las búsquedas desde móvil resultando en una visita o llamada a un negocio local en las siguientes 24 horas, la presencia local online ya no es opcional.
+                </p>
+                <p>
+                  Para las pequeñas y medianas empresas, el SEO local representa la oportunidad de competir de igual a igual con grandes corporaciones en su área geográfica. A través de una estrategia bien ejecutada de SEO local, una PYME puede destacar en los resultados de búsqueda locales, aparecer en el Local Pack de Google y captar clientes cualificados de su zona de influencia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">
+                Preguntas Frecuentes sobre SEO Local
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    ¿Cuánto tiempo se tarda en ver resultados con el SEO local?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Los primeros resultados suelen verse entre 3-6 meses, aunque esto puede variar según la competencia en tu sector y ubicación. Algunos cambios, como la optimización de Google Business Profile, pueden mostrar mejoras en semanas. Nuestro enfoque se centra en conseguir resultados sostenibles a largo plazo.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>
+                    ¿Por qué necesito SEO local si ya tengo una web?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Tener una web es solo el primer paso. El SEO local asegura que tu negocio aparezca cuando los clientes de tu zona buscan tus servicios. Incluye optimización de Google Business Profile, gestión de reseñas, creación de contenido local relevante y estrategias específicas para aparecer en el Local Pack de Google.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>
+                    ¿Qué diferencia hay entre SEO tradicional y SEO local?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    El SEO local se centra en optimizar tu presencia para búsquedas con intención local ("cerca de mí", "en [ciudad]", etc.) y en Google Maps. Incluye estrategias específicas como la optimización de Google Business Profile, gestión de citations locales y contenido orientado a tu área geográfica.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>
+                    ¿Necesito SEO local si solo tengo un negocio físico?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    ¡Absolutamente! El 78% de las búsquedas locales desde móvil resultan en una compra offline. El SEO local es especialmente importante para negocios físicos, ya que ayuda a aparecer en Google Maps y en búsquedas locales, dirigiendo tráfico cualificado a tu establecimiento.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>
+                    ¿Qué incluye la gestión de reseñas?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Nuestra gestión de reseñas incluye monitorización diaria, respuesta profesional a todas las reseñas (positivas y negativas), estrategias para conseguir más reseñas positivas y análisis de feedback para mejorar tu servicio. Las reseñas son cruciales para el SEO local y la confianza del cliente.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>
+                    ¿Cómo medís los resultados del SEO local?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Proporcionamos informes mensuales detallados que incluyen: posiciones en búsquedas locales, visibilidad en Google Maps, tráfico a la web, llamadas y direcciones solicitadas desde Google Business Profile, evolución de reseñas, y lo más importante: leads y conversiones generadas.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>
