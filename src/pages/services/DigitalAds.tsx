@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const DigitalAds = () => {
   return (
@@ -15,20 +21,20 @@ const DigitalAds = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-              alt="Publicidad Digital Hero"
+              alt="SEM y Publicidad Digital Hero"
               className="w-full h-full object-cover opacity-10"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-yellow/10 text-yellow">
-                Publicidad Digital
+                SEM y Publicidad Digital
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
-                Campañas Publicitarias que Generan Resultados
+                Campañas de SEM y Publicidad Digital que Generan Resultados
               </h1>
               <p className="text-xl text-muted-foreground mb-8 animate-fade-up leading-relaxed">
-                Maximiza tu retorno de inversión con estrategias publicitarias optimizadas
+                Maximiza tu retorno de inversión con estrategias de Search Engine Marketing (SEM) y publicidad digital optimizadas
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -278,6 +284,69 @@ const DigitalAds = () => {
             </div>
           </div>
         </section>
+
+        {/* What is SEM and Digital Advertising Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">¿Qué es el SEM y la Publicidad Digital?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <Card className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Search Engine Marketing (SEM)</h3>
+                <p className="text-muted-foreground">
+                  El SEM, o Marketing en Motores de Búsqueda, es una estrategia de marketing digital que se centra en la promoción de sitios web mediante anuncios pagados en los resultados de búsqueda. A través de plataformas como Google Ads, el SEM permite que tu negocio aparezca en las primeras posiciones cuando los usuarios buscan productos o servicios relacionados con tu actividad.
+                </p>
+              </Card>
+              <Card className="p-6">
+                <h3 className="text-xl font-semibold mb-4">Publicidad Digital</h3>
+                <p className="text-muted-foreground">
+                  La publicidad digital abarca todas las formas de promoción en línea, incluyendo anuncios en redes sociales, display advertising, remarketing y más. Esta estrategia multicanal permite alcanzar a tu audiencia ideal en diferentes plataformas y momentos del customer journey, maximizando las oportunidades de conversión.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-muted">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">Preguntas Frecuentes</h2>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>¿Cuál es la diferencia entre SEO y SEM?</AccordionTrigger>
+                  <AccordionContent>
+                    Mientras que el SEO se centra en mejorar el posicionamiento orgánico a largo plazo, el SEM ofrece resultados inmediatos a través de publicidad pagada. El SEO requiere tiempo para ver resultados, pero el SEM permite aparecer en las primeras posiciones de manera instantánea mediante pujas por palabras clave.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>¿Cuánto presupuesto necesito para empezar con SEM?</AccordionTrigger>
+                  <AccordionContent>
+                    El presupuesto mínimo recomendado para comenzar con SEM es de 500€ mensuales en publicidad, además de la tarifa de gestión. Este presupuesto permite realizar pruebas efectivas y obtener datos relevantes para optimizar las campañas.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>¿En qué plataformas publicitarias debería invertir?</AccordionTrigger>
+                  <AccordionContent>
+                    La elección de plataformas depende de tu negocio y objetivos. Google Ads es esencial para captar usuarios con intención de compra, mientras que las redes sociales son ideales para crear awareness y engagement. Realizamos un análisis personalizado para recomendar la mejor estrategia para tu caso.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>¿Cuánto tiempo necesito para ver resultados?</AccordionTrigger>
+                  <AccordionContent>
+                    Con SEM, los resultados son inmediatos en términos de visibilidad. Sin embargo, recomendamos un período mínimo de 3 meses para optimizar las campañas, ajustar las pujas y maximizar el ROI en base a los datos recopilados.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>¿Qué incluye la gestión de campañas?</AccordionTrigger>
+                  <AccordionContent>
+                    Nuestro servicio incluye investigación de palabras clave, creación y optimización de anuncios, seguimiento de conversiones, ajuste de pujas, testing A/B, remarketing, informes mensuales y recomendaciones estratégicas para mejorar el rendimiento de tus campañas.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
