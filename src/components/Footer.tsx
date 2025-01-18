@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,24 +35,24 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/servicios/seo-local" className="text-gray-300 hover:text-white transition-colors">
                   SEO Local
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Google Business Profile
-                </a>
+                <Link to="/servicios/seo-nacional" className="text-gray-300 hover:text-white transition-colors">
+                  SEO Nacional
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  SEM Local
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/servicios/desarrollo-web" className="text-gray-300 hover:text-white transition-colors">
                   Desarrollo Web
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/servicios/publicidad-digital" className="text-gray-300 hover:text-white transition-colors">
+                  Publicidad Digital
+                </Link>
               </li>
             </ul>
           </div>
@@ -61,9 +62,9 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Empresa</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Sobre Nosotros
-                </a>
+                <Link to="/servicios" className="text-gray-300 hover:text-white transition-colors">
+                  Servicios
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -76,9 +77,9 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/contacto" className="text-gray-300 hover:text-white transition-colors">
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,8 +90,8 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li className="text-gray-300">Madrid, España</li>
               <li>
-                <a href="tel:+34900000000" className="text-gray-300 hover:text-white transition-colors">
-                  +34 900 000 000
+                <a href="tel:+34744717942" className="text-gray-300 hover:text-white transition-colors">
+                  +34 744 717 942
                 </a>
               </li>
               <li>
