@@ -5,6 +5,80 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const plans = [
+  {
+    name: "Local Starter",
+    price: "297",
+    description: "Perfecto para negocios que inician su presencia local",
+    features: {
+      gbp: [
+        "Optimización inicial completa",
+        "Actualización mensual de información",
+        "Gestión básica de reseñas",
+        "1 publicación semanal",
+      ],
+      seo: [
+        "Optimización básica para 1 ubicación",
+        "Keywords research local (10 palabras clave)",
+        "Informes mensuales básicos",
+        "Optimización NAP",
+      ],
+    },
+  },
+  {
+    name: "Local Growth",
+    price: "597",
+    description: "Ideal para negocios en crecimiento",
+    popular: true,
+    features: {
+      gbp: [
+        "3 publicaciones semanales",
+        "Respuesta a reseñas en 24h",
+        "Fotos profesionales mensuales",
+        "Posts promocionales",
+      ],
+      seo: [
+        "Optimización para 2 ubicaciones",
+        "25 keywords principales",
+        "Citations building (20 directorios)",
+        "Schema markup avanzado",
+        "Contenido local mensual (2 artículos)",
+      ],
+      sem: [
+        "Campaña Google Ads básica",
+        "Presupuesto hasta 500€ (no incluido)",
+        "Optimización mensual",
+      ],
+    },
+  },
+  {
+    name: "Local Authority",
+    price: "997",
+    description: "Para dominar tu mercado local",
+    features: {
+      gbp: [
+        "5 publicaciones semanales",
+        "Gestión proactiva de reseñas",
+        "Estrategia de fotos premium",
+        "Posts con diseño personalizado",
+      ],
+      seo: [
+        "Optimización multi-ubicación (hasta 4)",
+        "50 keywords objetivo",
+        "Citations premium (40 directorios)",
+        "Contenido local semanal",
+        "Link building local",
+      ],
+      sem: [
+        "Gestión campañas avanzada",
+        "Presupuesto hasta 2000€ (no incluido)",
+        "A/B testing mensual",
+        "Remarketing local",
+      ],
+    },
+  },
+];
+
 const LocalSEO = () => {
   return (
     <>
@@ -32,90 +106,106 @@ const LocalSEO = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-24 bg-background">
+        {/* Pricing Section */}
+        <section className="py-24 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <h2 className="text-3xl font-bold">¿Qué incluye nuestro servicio?</h2>
-                  <ul className="space-y-4">
-                    {[
-                      "Optimización de Google Business Profile",
-                      "Investigación de palabras clave locales",
-                      "Optimización para múltiples ubicaciones",
-                      "Gestión de reseñas y reputación online",
-                      "Creación de contenido local relevante",
-                      "Construcción de citas (citations)",
-                      "Informes mensuales detallados"
-                    ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-3 group">
-                        <Check className="w-5 h-5 text-yellow mt-1 group-hover:scale-110 transition-transform" />
-                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4">Planes de SEO Local</h2>
+              <p className="text-xl text-muted-foreground">
+                Soluciones adaptadas a las necesidades de tu negocio local
+              </p>
+            </div>
 
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
-                    alt="SEO Local Dashboard"
-                    className="rounded-lg shadow-lg"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-lg" />
-                </div>
-              </div>
-
-              <div className="lg:sticky lg:top-24">
-                <Card className="border-2 border-yellow/20">
-                  <CardHeader className="space-y-2">
-                    <CardTitle className="text-2xl">Planes y Precios</CardTitle>
-                    <p className="text-muted-foreground">
-                      Soluciones adaptadas a tu negocio
-                    </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {plans.map((plan) => (
+                <Card 
+                  key={plan.name}
+                  className={`relative hover:shadow-lg transition-all duration-300 animate-fade-up ${
+                    plan.popular ? "border-2 border-yellow" : ""
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <span className="bg-yellow text-yellow-foreground px-4 py-1 rounded-full text-sm font-medium">
+                        Más Popular
+                      </span>
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl mb-4">{plan.name}</CardTitle>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold">{plan.price}€</span>
+                      <span className="text-muted-foreground">/mes</span>
+                    </div>
+                    <p className="text-muted-foreground">{plan.description}</p>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="space-y-2">
-                        <h3 className="font-semibold">Plan Local Starter</h3>
-                        <p className="text-2xl font-bold text-yellow">297€<span className="text-base font-normal text-muted-foreground">/mes</span></p>
-                        <p className="text-sm text-muted-foreground">Ideal para negocios que empiezan</p>
-                      </div>
-                      <div className="space-y-2">
-                        <h3 className="font-semibold">Plan Local Growth</h3>
-                        <p className="text-2xl font-bold text-yellow">597€<span className="text-base font-normal text-muted-foreground">/mes</span></p>
-                        <p className="text-sm text-muted-foreground">Para negocios en crecimiento</p>
-                      </div>
-                      <div className="space-y-2">
-                        <h3 className="font-semibold">Plan Local Authority</h3>
-                        <p className="text-2xl font-bold text-yellow">997€<span className="text-base font-normal text-muted-foreground">/mes</span></p>
-                        <p className="text-sm text-muted-foreground">Dominio total del mercado local</p>
-                      </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-yellow">Google Business Profile</h4>
+                      <ul className="space-y-2">
+                        {plan.features.gbp.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-yellow shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <div className="space-y-4">
-                      <Button asChild size="lg" className="w-full">
-                        <Link to="/contacto">Solicitar Presupuesto</Link>
-                      </Button>
-                      <p className="text-sm text-center text-muted-foreground">
-                        * Precios sin IVA. Contratos mínimos de 3 meses.
-                      </p>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-yellow">SEO Local</h4>
+                      <ul className="space-y-2">
+                        {plan.features.seo.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-yellow shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+
+                    {plan.features.sem && (
+                      <div>
+                        <h4 className="font-semibold mb-3 text-yellow">SEM Local</h4>
+                        <ul className="space-y-2">
+                          {plan.features.sem.map((feature) => (
+                            <li key={feature} className="flex items-start gap-2">
+                              <Check className="w-5 h-5 text-yellow shrink-0 mt-0.5" />
+                              <span className="text-muted-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    <Button 
+                      asChild
+                      className="w-full mt-6"
+                      variant={plan.popular ? "secondary" : "default"}
+                    >
+                      <Link to="/contacto">Empezar Ahora</Link>
+                    </Button>
                   </CardContent>
                 </Card>
-              </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground mb-4">
+                ¿Necesitas un plan personalizado? ¿Tienes múltiples ubicaciones?
+              </p>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/contacto">Contacta con Nosotros</Link>
+              </Button>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-muted">
+        <section className="py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">¿Por qué elegir nuestro SEO Local?</h2>
+              <h2 className="text-3xl font-bold mb-4">¿Por qué elegir nuestro SEO Local?</h2>
               <p className="text-xl text-muted-foreground">
                 Resultados comprobados en posicionamiento local
               </p>
