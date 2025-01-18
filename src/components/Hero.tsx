@@ -14,7 +14,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-white px-8"
+              className="bg-yellow hover:bg-yellow-light text-yellow-foreground px-8 transition-colors duration-300"
             >
               Consulta Gratuita
             </Button>

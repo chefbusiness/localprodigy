@@ -55,14 +55,14 @@ export const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title}
-              className="group hover:shadow-lg transition-all duration-300 animate-fade-up"
+              className="group hover:shadow-lg transition-all duration-300 animate-fade-up border-2 border-transparent hover:border-yellow/20"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-secondary" />
+                <div className="h-12 w-12 rounded-lg bg-yellow/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-yellow" />
                 </div>
-                <CardTitle className="group-hover:text-secondary transition-colors duration-300">
+                <CardTitle className="group-hover:text-yellow transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -70,7 +70,7 @@ export const Services = () => {
                 <p className="text-gray-600">{service.description}</p>
                 <Button 
                   variant="ghost" 
-                  className="group-hover:text-secondary group-hover:bg-secondary/10 transition-colors duration-300"
+                  className="group-hover:text-yellow group-hover:bg-yellow/10 transition-colors duration-300"
                   asChild
                 >
                   <a href={service.link}>
