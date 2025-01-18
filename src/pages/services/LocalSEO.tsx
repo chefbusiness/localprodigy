@@ -89,6 +89,32 @@ const LocalSEO = () => {
     ]
   };
 
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://localseoads.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://localseoads.com/servicios"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO Local",
+        "item": "https://localseoads.com/servicios/seo-local"
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -109,6 +135,18 @@ const LocalSEO = () => {
         <meta name="twitter:description" content="Mejora tu visibilidad local en Google. Especialistas en SEO local para empresas en España." />
         <meta name="twitter:image" content="https://localseoads.com/og-seo-local.jpg" />
         
+        {/* Additional SEO meta tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="localSEOads.com" />
+        <meta name="geo.region" content="ES" />
+        <meta name="geo.position" content="40.416775;-3.703790" />
+        <meta name="ICBM" content="40.416775, -3.703790" />
+        
+        {/* Language alternates */}
+        <link rel="alternate" hrefLang="es" href="https://localseoads.com/servicios/seo-local" />
+        <link rel="alternate" hrefLang="en" href="https://localseoads.com/en/services/local-seo" />
+        <link rel="alternate" hrefLang="x-default" href="https://localseoads.com/servicios/seo-local" />
+        
         {/* Canonical URL */}
         <link rel="canonical" href="https://localseoads.com/servicios/seo-local" />
         
@@ -118,6 +156,9 @@ const LocalSEO = () => {
         </script>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
