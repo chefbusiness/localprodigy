@@ -43,6 +43,7 @@ const tools = [
 
 export const ToolsCarousel = () => {
   const [api, setApi] = useState<any>(null);
+  const [imageErrors, setImageErrors] = useState<{[key: string]: string}>({});
   const plugin = Autoplay({ delay: 2000, stopOnInteraction: false });
 
   useEffect(() => {
@@ -65,6 +66,17 @@ export const ToolsCarousel = () => {
           </p>
         </div>
 
+        {Object.keys(imageErrors).length > 0 && (
+          <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">
+            <h3 className="font-bold mb-2">Errores de carga de imágenes:</h3>
+            <ul className="list-disc pl-5">
+              {Object.entries(imageErrors).map(([logo, error]) => (
+                <li key={logo}>Error en {logo}: {error}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <Carousel
           opts={{
             align: "start",
@@ -84,7 +96,11 @@ export const ToolsCarousel = () => {
                       alt={`Logo de ${tool.name}`}
                       className="h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
                       onError={(e) => {
-                        console.error(`Error loading image: ${tool.logo}`);
+                        const error = `No se pudo cargar la imagen (${tool.logo})`;
+                        setImageErrors(prev => ({
+                          ...prev,
+                          [tool.logo]: error
+                        }));
                         e.currentTarget.style.display = 'none';
                       }}
                     />
