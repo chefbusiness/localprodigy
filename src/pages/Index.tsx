@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ToolsSection } from "@/components/ToolsSection";
+import { ToolsCarousel } from "@/components/ToolsCarousel";
 
 const Index = () => {
   return (
@@ -14,8 +14,8 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         <Services />
-        <ToolsSection />
         <Testimonials />
+        <ToolsCarousel />
         <section className="py-16 px-4 bg-muted text-center">
           <h2 className="text-3xl font-bold mb-6">¿Listo para empezar?</h2>
           <p className="text-xl text-muted-foreground mb-8">
