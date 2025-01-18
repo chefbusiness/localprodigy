@@ -36,15 +36,18 @@ export const Hero = () => {
               <Link to="/servicios">Descubre Nuestros Servicios</Link>
             </Button>
           </div>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { number: "500+", text: "Clientes Satisfechos" },
               { number: "95%", text: "Tasa de Retención" },
               { number: "3X", text: "ROI Promedio" }
             ].map((stat, index) => (
-              <div key={index} className="p-6 rounded-xl bg-white/5 backdrop-blur-sm">
-                <div className="text-3xl font-bold text-yellow mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.text}</div>
+              <div 
+                key={index} 
+                className="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="text-4xl font-bold text-yellow mb-3">{stat.number}</div>
+                <div className="text-xl text-white/90 font-medium">{stat.text}</div>
               </div>
             ))}
           </div>
