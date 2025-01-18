@@ -155,7 +155,7 @@ export const PricingPlans = () => {
                   className="w-full mt-6"
                   variant={plan.popular ? "secondary" : "default"}
                 >
-                  <Link to="/contacto">Empezar Ahora</Link>
+                  <Link to="/contacto">Solicitar Plan</Link>
                 </Button>
               </CardContent>
             </Card>
