@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Facebook, PenTool, RotateCw, Layout, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -23,7 +23,6 @@ const DigitalAds = () => {
     <>
       <Header />
       <main className="min-h-screen bg-background">
-        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
@@ -78,32 +77,62 @@ const DigitalAds = () => {
               {[
                 {
                   title: "Google Ads",
-                  description: "Campañas en el buscador más usado del mundo"
+                  description: "Campañas en el buscador más usado del mundo",
+                  icon: Target,
+                  bgColor: "bg-emerald-50",
+                  iconColor: "text-emerald-600",
+                  hoverColor: "hover:bg-emerald-100"
                 },
                 {
                   title: "Meta Ads",
-                  description: "Publicidad en Facebook e Instagram"
+                  description: "Publicidad en Facebook e Instagram",
+                  icon: Facebook,
+                  bgColor: "bg-blue-50",
+                  iconColor: "text-blue-600",
+                  hoverColor: "hover:bg-blue-100"
                 },
                 {
                   title: "TikTok Ads",
-                  description: "Alcanza a la audiencia más joven"
+                  description: "Alcanza a la audiencia más joven",
+                  icon: PenTool,
+                  bgColor: "bg-purple-50",
+                  iconColor: "text-purple-600",
+                  hoverColor: "hover:bg-purple-100"
                 },
                 {
                   title: "Pinterest Ads",
-                  description: "Ideal para negocios visuales"
+                  description: "Ideal para negocios visuales",
+                  icon: Layout,
+                  bgColor: "bg-red-50",
+                  iconColor: "text-red-600",
+                  hoverColor: "hover:bg-red-100"
                 },
                 {
                   title: "Display Ads",
-                  description: "Anuncios gráficos en toda la red"
+                  description: "Anuncios gráficos en toda la red",
+                  icon: PenTool,
+                  bgColor: "bg-orange-50",
+                  iconColor: "text-orange-600",
+                  hoverColor: "hover:bg-orange-100"
                 },
                 {
                   title: "Remarketing",
-                  description: "Reconecta con usuarios interesados"
+                  description: "Reconecta con usuarios interesados",
+                  icon: RotateCw,
+                  bgColor: "bg-yellow-50",
+                  iconColor: "text-yellow-600",
+                  hoverColor: "hover:bg-yellow-100"
                 }
               ].map((service) => (
-                <Card key={service.title} className="group hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-yellow transition-colors">
+                <Card 
+                  key={service.title} 
+                  className={`group transition-all duration-300 ${service.bgColor} ${service.hoverColor} border-none`}
+                >
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <div className={`p-2 rounded-lg ${service.iconColor}`}>
+                      <service.icon className="w-6 h-6" />
+                    </div>
+                    <CardTitle className="text-xl">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
@@ -118,7 +147,6 @@ const DigitalAds = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
         <section id="planes" className="py-24 bg-muted">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -354,7 +382,7 @@ const DigitalAds = () => {
           </div>
         </section>
 
-        {/* CTA Section - Moved below FAQ */}
+        {/* CTA Section - Below FAQ */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 text-center">
             <p className="text-muted-foreground mb-6">
