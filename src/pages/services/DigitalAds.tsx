@@ -12,6 +12,13 @@ import {
 } from "@/components/ui/accordion";
 
 const DigitalAds = () => {
+  const scrollToPlanes = () => {
+    const planesSection = document.getElementById('planes');
+    if (planesSection) {
+      planesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Header />
@@ -45,12 +52,12 @@ const DigitalAds = () => {
                   <Link to="/contacto">Solicitar Presupuesto</Link>
                 </Button>
                 <Button 
-                  asChild 
                   size="lg" 
                   variant="outline" 
                   className="text-lg animate-fade-up hover:bg-white/10"
+                  onClick={scrollToPlanes}
                 >
-                  <Link to="#planes">Ver Planes</Link>
+                  Ver Planes
                 </Button>
               </div>
             </div>
