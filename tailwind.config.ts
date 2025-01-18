@@ -53,6 +53,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      textShadow: {
+        DEFAULT: '0 2px 4px rgba(0,0,0,0.1)',
+        neon: '0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -75,5 +79,16 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke-yellow': {
+          '-webkit-text-stroke': '1px #F97316',
+          'text-stroke': '1px #F97316',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;

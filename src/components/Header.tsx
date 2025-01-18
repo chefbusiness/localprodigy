@@ -18,9 +18,11 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo with Icon */}
-          <a href="/" className="flex items-center space-x-2 text-xl font-bold text-primary">
+          <a href="/" className="flex items-center space-x-2 text-xl font-bold text-primary group">
             <MapPin className="h-6 w-6" />
-            <span>localSEOads</span>
+            <span className="text-stroke-yellow text-primary drop-shadow-[0_0_0.3rem_#333] transition-all duration-300 group-hover:drop-shadow-[0_0_0.5rem_#333]">
+              localSEOads
+            </span>
           </a>
 
           {/* Desktop Navigation */}
