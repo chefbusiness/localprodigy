@@ -36,7 +36,7 @@ export const Hero = () => {
               variant="outline" 
               className="text-lg animate-fade-up hover:bg-white/10"
             >
-              <Link to="#planes">Ver Planes</Link>
+              <a href="#planes">Ver Planes</a>
             </Button>
           </div>
         </div>
