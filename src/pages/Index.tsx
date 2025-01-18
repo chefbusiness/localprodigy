@@ -21,7 +21,11 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Solicita tu consulta gratuita y descubre cómo podemos ayudarte
           </p>
-          <Button asChild size="lg">
+          <Button 
+            asChild 
+            size="lg"
+            className="px-6 md:px-8 py-5 md:py-6 text-base md:text-lg bg-yellow hover:bg-yellow-light text-yellow-foreground transition-colors duration-300"
+          >
             <Link to="/contacto">Contactar Ahora</Link>
           </Button>
         </section>
