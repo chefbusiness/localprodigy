@@ -49,7 +49,6 @@ export const ToolsCarousel = () => {
     if (!api) return;
 
     api.on("select", () => {
-      // Puedes agregar lógica adicional aquí si es necesario
       console.log("Slide changed");
     });
   }, [api]);
@@ -79,11 +78,11 @@ export const ToolsCarousel = () => {
             {tools.map((tool, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4 lg:basis-1/6">
                 <div className="p-2">
-                  <div className="h-20 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="h-24 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                     <img
                       src={tool.logo}
                       alt={`Logo de ${tool.name}`}
-                      className="h-12 object-contain hover:scale-110 transition-transform duration-300"
+                      className="h-16 w-auto object-contain hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                 </div>
