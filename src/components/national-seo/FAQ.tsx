@@ -52,7 +52,7 @@ export const FAQ = () => {
 
             <AccordionItem value="item-5">
               <AccordionTrigger>
-                ¿Cómo medís los resultados del SEO nacional?
+                ¿Cómo medimos los resultados del SEO nacional?
               </AccordionTrigger>
               <AccordionContent>
                 Utilizamos herramientas profesionales para medir rankings de keywords, tráfico orgánico, conversiones, autoridad de dominio, backlinks ganados y ROI. Proporcionamos informes mensuales detallados con métricas clave y recomendaciones estratégicas.
