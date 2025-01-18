@@ -6,6 +6,7 @@ import { WhatIs } from "@/components/national-seo/WhatIs";
 import { Services } from "@/components/national-seo/Services";
 import { Pricing } from "@/components/national-seo/Pricing";
 import { FAQ } from "@/components/national-seo/FAQ";
+import { ToolsSection } from "@/components/ToolsSection";
 
 const NationalSEO = () => {
   // Schema for Service
@@ -122,6 +123,7 @@ const NationalSEO = () => {
         <Hero />
         <WhatIs />
         <Services />
+        <ToolsSection />
         <Pricing />
         <FAQ />
       </main>
