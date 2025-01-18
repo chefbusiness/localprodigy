@@ -4,23 +4,23 @@ import { Users, BarChart3, Target } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-primary via-primary/95 to-background text-white overflow-hidden">
+    <div className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-b from-primary via-primary/95 to-background text-white overflow-hidden">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid-white/[0.02]" />
-      <div className="container mx-auto px-4 py-40 animate-fade-up relative z-10">
+      <div className="container mx-auto px-4 py-24 md:py-32 animate-fade-up relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-6 py-2 mb-8 text-lg font-medium rounded-full bg-yellow/10 text-yellow">
+          <span className="inline-block px-6 py-2 mb-6 md:mb-8 text-base md:text-lg font-medium rounded-full bg-yellow/10 text-yellow">
             Agencia SEO/SEM Local Líder en España
           </span>
-          <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 leading-tight">
             Aumenta tus Ventas con Marketing Digital Local
           </h1>
-          <p className="text-2xl md:text-3xl mb-12 text-gray-200 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl md:text-3xl mb-8 md:mb-12 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             Especialistas en posicionamiento SEO local y campañas SEM para negocios que buscan dominar su mercado local. Resultados garantizados y ROI medible.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
             <Button
               size="lg"
-              className="bg-yellow hover:bg-yellow-light text-yellow-foreground px-8 py-6 text-lg transition-colors duration-300 relative overflow-hidden group"
+              className="w-full sm:w-auto bg-yellow hover:bg-yellow-light text-yellow-foreground px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300 relative overflow-hidden group"
               asChild
             >
               <Link to="/contacto">
@@ -31,13 +31,13 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg transition-colors duration-300"
+              className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300"
               asChild
             >
               <Link to="/servicios">Descubre Nuestros Servicios</Link>
             </Button>
           </div>
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto">
             {[
               { 
                 number: "500+", 
@@ -63,19 +63,19 @@ export const Hero = () => {
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className={`p-8 rounded-2xl ${stat.bgColor} backdrop-blur-md border border-white/20 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg`}
+                className={`p-6 md:p-8 rounded-2xl ${stat.bgColor} backdrop-blur-md border border-white/20 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg`}
               >
-                <div className="flex items-center justify-center mb-4">
-                  <stat.icon size={32} color={stat.iconColor} />
+                <div className="flex items-center justify-center mb-3 md:mb-4">
+                  <stat.icon size={28} color={stat.iconColor} />
                 </div>
-                <div className="text-4xl font-bold text-primary mb-3">{stat.number}</div>
-                <div className="text-xl text-primary/80 font-medium">{stat.text}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2 md:mb-3">{stat.number}</div>
+                <div className="text-lg md:text-xl text-primary/80 font-medium">{stat.text}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-background to-transparent" />
     </div>
   );
 };
