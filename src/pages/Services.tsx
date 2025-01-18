@@ -26,7 +26,7 @@ const Services = () => {
       link: "/servicios/desarrollo-web"
     },
     {
-      title: "Publicidad Digital",
+      title: "SEM Publicidad Digital",
       description: "Gestión profesional de campañas en Google Ads, Meta Ads, TikTok y Pinterest. Maximiza tu ROI con estrategias personalizadas.",
       icon: Target,
       link: "/servicios/publicidad-digital"
