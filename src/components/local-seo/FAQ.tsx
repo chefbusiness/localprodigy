@@ -61,7 +61,7 @@ export const FAQ = () => {
 
             <AccordionItem value="item-6">
               <AccordionTrigger>
-                ¿Cómo medís los resultados del SEO local?
+                ¿Cómo medimos los resultados del SEO local?
               </AccordionTrigger>
               <AccordionContent>
                 Proporcionamos informes mensuales detallados que incluyen: posiciones en búsquedas locales, visibilidad en Google Maps, tráfico a la web, llamadas y direcciones solicitadas desde Google Business Profile, evolución de reseñas, y lo más importante: leads y conversiones generadas.
