@@ -36,23 +36,34 @@ const Services = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-4">Nuestros Servicios</h1>
-          <p className="text-xl text-center text-muted-foreground mb-12">
-            Soluciones digitales completas para hacer crecer tu negocio
-          </p>
+      <main className="min-h-screen bg-background">
+        <div className="container mx-auto px-4 py-24">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestros Servicios</h1>
+            <p className="text-xl text-muted-foreground">
+              Soluciones digitales completas para hacer crecer tu negocio
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {services.map((service) => (
-              <Card key={service.title} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <service.icon className="w-12 h-12 text-yellow-500 mb-4" />
-                  <CardTitle>{service.title}</CardTitle>
+              <Card key={service.title} className="group hover:shadow-lg transition-all duration-300">
+                <CardHeader className="space-y-4">
+                  <div className="h-12 w-12 rounded-lg bg-yellow/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-yellow" />
+                  </div>
+                  <CardTitle className="text-2xl group-hover:text-yellow transition-colors">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{service.description}</p>
-                  <Button asChild>
+                <CardContent className="space-y-6">
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                  <Button 
+                    asChild
+                    className="w-full group-hover:bg-yellow group-hover:text-yellow-foreground transition-all duration-300"
+                  >
                     <Link to={service.link}>Ver más detalles →</Link>
                   </Button>
                 </CardContent>
@@ -60,7 +71,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );
