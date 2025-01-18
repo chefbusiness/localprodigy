@@ -84,7 +84,7 @@ const LocalSEO = () => {
     <>
       <Header />
       <main className="min-h-screen bg-background">
-        {/* Hero Section - Updated padding-top */}
+        {/* Hero Section - Updated with better visual hierarchy */}
         <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
@@ -95,19 +95,84 @@ const LocalSEO = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">SEO Local</h1>
-              <p className="text-xl text-muted-foreground mb-8 animate-fade-up">
-                Domina las búsquedas locales y atrae más clientes de tu zona
+              <span className="inline-block px-4 py-1 mb-6 text-sm font-medium rounded-full bg-yellow/10 text-yellow">
+                SEO Local
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
+                Domina las Búsquedas Locales
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 animate-fade-up leading-relaxed">
+                Aumenta tu visibilidad en Google Maps y búsquedas locales. Atrae más clientes cualificados de tu zona.
               </p>
-              <Button asChild size="lg" className="animate-fade-up">
-                <Link to="/contacto">Solicitar Consulta Gratuita</Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="animate-fade-up">
+                  <Link to="/contacto">Solicitar Consulta Gratuita</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="animate-fade-up">
+                  <Link to="#planes">Ver Planes</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-24 bg-muted">
+        {/* Benefits Section */}
+        <section className="py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4">¿Por qué elegir nuestro SEO Local?</h2>
+              <p className="text-xl text-muted-foreground">
+                Resultados comprobados en posicionamiento local
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Experiencia Comprobada",
+                  description: "Años de experiencia en SEO local con casos de éxito documentados",
+                  image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                },
+                {
+                  title: "Estrategia Personalizada",
+                  description: "Plan adaptado a tu negocio y mercado local específico",
+                  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                },
+                {
+                  title: "Resultados Medibles",
+                  description: "Informes detallados y métricas claras de rendimiento",
+                  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                }
+              ].map((benefit, index) => (
+                <Card 
+                  key={benefit.title}
+                  className="group hover:shadow-lg transition-all duration-300 animate-fade-up border-2 border-transparent hover:border-yellow/20"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardHeader>
+                    <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                      <img 
+                        src={benefit.image} 
+                        alt={benefit.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    </div>
+                    <CardTitle className="group-hover:text-yellow transition-colors duration-300">
+                      {benefit.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{benefit.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section with Enhanced Visual Design */}
+        <section id="planes" className="py-24 bg-muted">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Planes de SEO Local</h2>
@@ -116,7 +181,7 @@ const LocalSEO = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {plans.map((plan) => (
                 <Card 
                   key={plan.name}
@@ -190,68 +255,13 @@ const LocalSEO = () => {
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <p className="text-muted-foreground mb-4">
+            <div className="text-center mt-16">
+              <p className="text-muted-foreground mb-6">
                 ¿Necesitas un plan personalizado? ¿Tienes múltiples ubicaciones?
               </p>
               <Button variant="outline" size="lg" asChild>
                 <Link to="/contacto">Contacta con Nosotros</Link>
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">¿Por qué elegir nuestro SEO Local?</h2>
-              <p className="text-xl text-muted-foreground">
-                Resultados comprobados en posicionamiento local
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Experiencia Comprobada",
-                  description: "Años de experiencia en SEO local con casos de éxito documentados",
-                  image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-                },
-                {
-                  title: "Estrategia Personalizada",
-                  description: "Plan adaptado a tu negocio y mercado local específico",
-                  image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-                },
-                {
-                  title: "Resultados Medibles",
-                  description: "Informes detallados y métricas claras de rendimiento",
-                  image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                }
-              ].map((benefit, index) => (
-                <Card 
-                  key={benefit.title}
-                  className="group hover:shadow-lg transition-all duration-300 animate-fade-up border-2 border-transparent hover:border-yellow/20"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <CardHeader>
-                    <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                      <img 
-                        src={benefit.image} 
-                        alt={benefit.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                    </div>
-                    <CardTitle className="group-hover:text-yellow transition-colors duration-300">
-                      {benefit.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
