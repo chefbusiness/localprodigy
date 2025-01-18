@@ -67,7 +67,7 @@ export const Header = () => {
                   <NavigationMenuTrigger className="text-gray-600 hover:text-yellow transition-colors">
                     Servicios
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="absolute left-1/2 transform -translate-x-1/2">
                     <div className="w-[400px] md:w-[500px] lg:w-[600px] p-4 bg-white rounded-md shadow-lg">
                       <div className="grid gap-3 md:grid-cols-2">
                         {serviceMenuItems.map((service) => (
