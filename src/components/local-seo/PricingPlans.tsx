@@ -152,8 +152,10 @@ export const PricingPlans = () => {
 
                 <Button 
                   asChild
-                  className="w-full mt-6"
-                  variant={plan.popular ? "secondary" : "default"}
+                  className={`w-full mt-6 text-base ${
+                    plan.popular ? "bg-yellow hover:bg-yellow-dark text-yellow-foreground" : ""
+                  }`}
+                  variant={plan.popular ? "default" : "default"}
                 >
                   <Link to="/contacto">Solicitar Plan</Link>
                 </Button>
