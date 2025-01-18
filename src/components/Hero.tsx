@@ -37,7 +37,7 @@ export const Hero = () => {
               <Link to="/servicios">Descubre Nuestros Servicios</Link>
             </Button>
           </div>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { 
                 number: "500+", 
