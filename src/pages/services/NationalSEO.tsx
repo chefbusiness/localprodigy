@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { WhatIs } from "@/components/national-seo/WhatIs";
+import { FAQ } from "@/components/national-seo/FAQ";
 
 const NationalSEO = () => {
   return (
@@ -44,31 +46,14 @@ const NationalSEO = () => {
                   variant="outline" 
                   className="text-lg animate-fade-up hover:bg-white/10"
                 >
-                  <Link to="#planes">Ver Planes</Link>
+                  <a href="#planes">Ver Planes</a>
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Importance Section */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center">
-                La Importancia del SEO Nacional en 2025
-              </h2>
-              <div className="prose prose-lg mx-auto text-muted-foreground">
-                <p className="mb-6">
-                  En 2025, el SEO nacional se ha convertido en una herramienta fundamental para empresas que buscan expandir su presencia en todo el país. Con más del 90% de las experiencias online comenzando con una búsqueda en Google, una estrategia de SEO nacional sólida es esencial para destacar en un mercado cada vez más competitivo.
-                </p>
-                <p>
-                  Para las empresas con ambición de crecimiento nacional, una estrategia de SEO bien ejecutada representa la oportunidad de competir efectivamente en múltiples mercados simultáneamente, estableciendo una presencia digital sólida en toda España.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <WhatIs />
 
         {/* Services Grid */}
         <section className="py-24 bg-muted">
@@ -225,6 +210,8 @@ const NationalSEO = () => {
             </div>
           </div>
         </section>
+
+        <FAQ />
       </main>
       <Footer />
     </>
