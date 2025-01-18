@@ -43,7 +43,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="backdrop-blur-sm bg-white/50 border-none hover:scale-105 transition-transform duration-300 p-8"
+              className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100"
             >
               <CardContent className="p-6">
                 <div className="flex mb-6">
