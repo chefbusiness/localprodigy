@@ -83,6 +83,10 @@ export const ToolsCarousel = () => {
                       src={tool.logo}
                       alt={`Logo de ${tool.name}`}
                       className="h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        console.error(`Error loading image: ${tool.logo}`);
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
                   </div>
                 </div>
