@@ -179,7 +179,7 @@ const Sectors = () => {
                     className="w-full group-hover:bg-yellow group-hover:text-yellow-foreground transition-all duration-300"
                     asChild
                   >
-                    <Link to={`/sectores/${sector.title.toLowerCase().replace(/ /g, "-")}`}>
+                    <Link to={`/sectores/servicios-profesionales`}>
                       Ver más detalles →
                     </Link>
                   </Button>

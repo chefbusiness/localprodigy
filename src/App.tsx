@@ -11,6 +11,7 @@ import LocalSEO from "./pages/services/LocalSEO";
 import NationalSEO from "./pages/services/NationalSEO";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import DigitalAds from "./pages/services/DigitalAds";
+import ProfessionalServices from "./pages/sectors/ProfessionalServices";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/servicios/seo-nacional" element={<NationalSEO />} />
           <Route path="/servicios/desarrollo-web" element={<WebDevelopment />} />
           <Route path="/servicios/publicidad-digital" element={<DigitalAds />} />
+          <Route path="/sectores/servicios-profesionales" element={<ProfessionalServices />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
