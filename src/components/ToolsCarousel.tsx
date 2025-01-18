@@ -8,37 +8,52 @@ import Autoplay from "embla-carousel-autoplay";
 const tools = [
   {
     name: "Google Search Console",
-    logo: "/tools/google-search-console.svg",
+    logo: "/lovable-uploads/60c141c3-0a36-456e-a0d3-aee9bda05998.png",
     alt: "Logo de Google Search Console"
   },
   {
-    name: "Google Analytics",
-    logo: "/tools/google-analytics.svg",
-    alt: "Logo de Google Analytics"
+    name: "Google Maps",
+    logo: "/lovable-uploads/fcc9ba19-2a55-4d1d-a967-fa74fa71bedf.png",
+    alt: "Logo de Google Maps"
+  },
+  {
+    name: "Google Reviews",
+    logo: "/lovable-uploads/51b793ea-c7df-4ac8-a270-9214ef4aee73.png",
+    alt: "Logo de Google Reviews"
+  },
+  {
+    name: "Google Ads",
+    logo: "/lovable-uploads/4422f01a-4384-4b80-986d-eb3ecde6e462.png",
+    alt: "Logo de Google Ads"
   },
   {
     name: "Google Tag Manager",
-    logo: "/tools/google-tag-manager.svg",
+    logo: "/lovable-uploads/bb8da74b-326d-4c4f-a491-bdc002e4eb0e.png",
     alt: "Logo de Google Tag Manager"
   },
   {
-    name: "Ahrefs",
-    logo: "/tools/ahrefs.svg",
-    alt: "Logo de Ahrefs"
-  },
-  {
     name: "Semrush",
-    logo: "/tools/semrush.svg",
+    logo: "/lovable-uploads/5531fced-1169-4d9d-bee2-e404cc868d42.png",
     alt: "Logo de Semrush"
   },
   {
+    name: "Ahrefs",
+    logo: "/lovable-uploads/d2ea3838-5715-4a52-a5d6-b6a9ba86519a.png",
+    alt: "Logo de Ahrefs"
+  },
+  {
+    name: "Screaming Frog",
+    logo: "/lovable-uploads/a5667ec7-4ba6-4008-9545-58e60313e453.png",
+    alt: "Logo de Screaming Frog"
+  },
+  {
     name: "SearchAtlas",
-    logo: "/tools/searchatlas.svg",
+    logo: "/lovable-uploads/a132eb6b-8d2a-4b35-874e-62998622c211.png",
     alt: "Logo de SearchAtlas"
   },
   {
     name: "LowFruits",
-    logo: "/tools/lowfruits.svg",
+    logo: "/lovable-uploads/69b4b148-ffef-45e4-9b16-1a5db1cf0c24.png",
     alt: "Logo de LowFruits"
   }
 ];
