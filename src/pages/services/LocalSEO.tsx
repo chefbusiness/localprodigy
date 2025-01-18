@@ -84,8 +84,8 @@ const LocalSEO = () => {
     <>
       <Header />
       <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden bg-gradient-to-b from-muted to-background">
+        {/* Hero Section - Updated padding-top */}
+        <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
