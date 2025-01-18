@@ -152,10 +152,11 @@ export const PricingPlans = () => {
 
                 <Button 
                   asChild
-                  className={`w-full mt-6 text-base ${
-                    plan.popular ? "bg-yellow hover:bg-yellow-dark text-yellow-foreground" : ""
+                  className={`w-full mt-6 text-lg ${
+                    plan.popular 
+                      ? "bg-yellow hover:bg-yellow-dark text-yellow-foreground" 
+                      : "hover:bg-primary/90"
                   }`}
-                  variant={plan.popular ? "default" : "default"}
                 >
                   <Link to="/contacto">Solicitar Plan</Link>
                 </Button>
@@ -168,7 +169,12 @@ export const PricingPlans = () => {
           <p className="text-muted-foreground mb-6">
             ¿Necesitas un plan personalizado? ¿Tienes múltiples ubicaciones?
           </p>
-          <Button variant="outline" size="lg" asChild>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            asChild 
+            className="text-lg hover:bg-white/10"
+          >
             <Link to="/contacto">Contacta con Nosotros</Link>
           </Button>
         </div>

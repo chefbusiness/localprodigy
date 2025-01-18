@@ -23,10 +23,19 @@ export const Hero = () => {
             Aumenta tu visibilidad en Google Maps y búsquedas locales. Atrae más clientes cualificados de tu zona.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="animate-fade-up">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-yellow hover:bg-yellow-dark text-yellow-foreground text-lg animate-fade-up"
+            >
               <Link to="/contacto">Solicitar Consulta Gratuita</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="animate-fade-up">
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline" 
+              className="text-lg animate-fade-up hover:bg-white/10"
+            >
               <Link to="#planes">Ver Planes</Link>
             </Button>
           </div>
