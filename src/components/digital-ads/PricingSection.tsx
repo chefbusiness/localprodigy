@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Facebook, Instagram, Package, TiktokIcon } from "lucide-react";
+import { Check, Facebook, Instagram, Package, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const PricingSection = () => {
@@ -201,7 +201,7 @@ export const PricingSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-all duration-300 bg-pink-50/50">
               <CardContent className="pt-8">
-                <TiktokIcon className="w-8 h-8 mx-auto mb-4" />
+                <Video className="w-8 h-8 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">TikTok Ads</h3>
                 <p className="text-lg font-bold text-yellow mb-4">desde 497€/mes</p>
                 <p className="text-muted-foreground mb-6">Gestión profesional de campañas en TikTok</p>
