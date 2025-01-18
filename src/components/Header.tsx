@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, MapPin, ChevronDown } from "lucide-react";
+import { Menu, X, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -68,7 +67,7 @@ export const Header = () => {
                   <NavigationMenuTrigger className="text-gray-600 hover:text-yellow transition-colors">
                     Servicios
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="absolute left-0 right-auto">
                     <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {serviceMenuItems.map((service) => (
                         <Link
