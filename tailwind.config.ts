@@ -36,6 +36,12 @@ export default {
           DEFAULT: "#FFB84D",
           foreground: "#1A1F2C",
         },
+        yellow: {
+          DEFAULT: "#F7B500", // Color amarillo tipo Páginas Amarillas
+          light: "#FFD452",
+          dark: "#E5A800",
+          foreground: "#1A1F2C",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
