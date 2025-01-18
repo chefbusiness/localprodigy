@@ -1,58 +1,82 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Globe, LineChart, Code, Share2, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     title: "SEO Local",
-    description: "Mejora tu visibilidad en búsquedas locales y Google Maps",
+    description: "Mejora tu visibilidad en búsquedas locales y Google Maps. Optimizamos tu presencia para atraer clientes de tu zona.",
     icon: Search,
+    link: "#seo-local",
   },
   {
     title: "Google Business Profile",
-    description: "Optimización y gestión de tu perfil de empresa en Google",
+    description: "Gestión profesional de tu perfil de Google Business. Maximiza tu visibilidad en búsquedas locales y Google Maps.",
     icon: Globe,
+    link: "#google-business",
   },
   {
     title: "SEM Local",
-    description: "Campañas de publicidad dirigidas a tu área de servicio",
+    description: "Campañas de Google Ads optimizadas para tu área de servicio. Atrae clientes cualificados de tu zona.",
     icon: LineChart,
+    link: "#sem-local",
   },
   {
     title: "Desarrollo Web",
-    description: "Sitios web optimizados para conversión y SEO",
+    description: "Sitios web optimizados para SEO y conversión. Diseño responsive y velocidad de carga optimizada.",
     icon: Code,
+    link: "#desarrollo-web",
   },
   {
     title: "Social Ads",
-    description: "Publicidad en redes sociales para alcance local",
+    description: "Publicidad en redes sociales dirigida a tu audiencia local. Aumenta tu visibilidad en redes sociales.",
     icon: Share2,
+    link: "#social-ads",
   },
   {
     title: "Reputación Online",
-    description: "Gestión y monitoreo de reseñas y opiniones",
+    description: "Gestión y monitoreo de reseñas. Mejora tu imagen online y construye confianza con tus clientes.",
     icon: MessageSquare,
+    link: "#reputacion-online",
   },
 ];
 
 export const Services = () => {
   return (
-    <section className="py-24 bg-muted">
+    <section id="servicios" className="py-24 bg-gradient-to-b from-muted to-background">
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl font-bold mb-4">Nuestros Servicios</h2>
-          <p className="text-xl text-gray-600">
-            Soluciones integrales de marketing digital para negocios locales
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Soluciones integrales de marketing digital diseñadas específicamente para negocios locales que buscan crecer
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Card key={service.title} className="hover:shadow-lg transition-shadow">
+          {services.map((service, index) => (
+            <Card 
+              key={service.title}
+              className="group hover:shadow-lg transition-all duration-300 animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <CardHeader>
-                <service.icon className="w-12 h-12 text-secondary mb-4" />
-                <CardTitle>{service.title}</CardTitle>
+                <div className="h-12 w-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-secondary" />
+                </div>
+                <CardTitle className="group-hover:text-secondary transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <p className="text-gray-600">{service.description}</p>
+                <Button 
+                  variant="ghost" 
+                  className="group-hover:text-secondary group-hover:bg-secondary/10 transition-colors duration-300"
+                  asChild
+                >
+                  <a href={service.link}>
+                    Saber más →
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}
