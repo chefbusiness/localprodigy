@@ -70,21 +70,33 @@ const NationalSEO = () => {
                 {
                   title: "SEO On Page",
                   description: "Optimización completa de tu sitio web, incluyendo contenido, estructura y elementos técnicos",
+                  image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
                 },
                 {
                   title: "SEO Off Page",
                   description: "Estrategias de link building y creación de autoridad para tu dominio",
+                  image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
                 },
                 {
                   title: "Contenido SEO",
                   description: "Creación de contenido optimizado y estratégico para diferentes regiones",
+                  image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
                 },
                 {
                   title: "Análisis y Reporting",
                   description: "Informes detallados de rendimiento y evolución de posiciones",
+                  image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
                 }
               ].map((service) => (
                 <Card key={service.title} className="group hover:shadow-lg transition-all duration-300">
+                  <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-2xl group-hover:text-yellow transition-colors">
                       {service.title}
