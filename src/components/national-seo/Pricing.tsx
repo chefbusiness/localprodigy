@@ -10,7 +10,7 @@ const plans = [
     features: [
       "SEO On Page básico",
       "Google Business Profile",
-      "15 palabras clave objetivo",
+      "15 keywords objetivo",
       "Informes mensuales",
       "Contenido básico"
     ]
@@ -22,9 +22,9 @@ const plans = [
     features: [
       "SEO On Page completo",
       "SEO Off Page básico",
-      "30 palabras clave objetivo",
-      "Creación de enlaces (5 enlaces/mes)",
-      "Artículos para blog (2/mes)",
+      "30 keywords objetivo",
+      "Link building (5 enlaces/mes)",
+      "Blog posts (2/mes)",
       "Informes semanales"
     ]
   },
@@ -33,11 +33,11 @@ const plans = [
     price: "1.997",
     features: [
       "SEO On/Off Page avanzado",
-      "Creación de enlaces premium",
-      "50+ palabras clave objetivo",
-      "Artículos para blog (4/mes)",
-      "SEO técnico",
-      "SEO para vídeo",
+      "Link building premium",
+      "50+ keywords objetivo",
+      "Blog posts (4/mes)",
+      "Technical SEO",
+      "Video SEO",
       "Informes personalizados"
     ]
   }

@@ -17,10 +17,10 @@ export const Hero = () => {
             SEO Nacional
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
-            Domina las Búsquedas en Toda España
+            Domina las Búsquedas a Nivel Nacional
           </h1>
           <p className="text-xl text-muted-foreground mb-8 animate-fade-up leading-relaxed">
-            Incrementa tu visibilidad en todo el territorio nacional y alcanza a más clientes potenciales
+            Aumenta tu visibilidad en toda España y alcanza a más clientes potenciales
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -28,7 +28,7 @@ export const Hero = () => {
               size="lg" 
               className="bg-yellow hover:bg-yellow-dark text-yellow-foreground text-lg animate-fade-up"
             >
-              <Link to="/contacto">Solicitar Presupuesto Gratuito</Link>
+              <Link to="/contacto">Solicitar Consulta Gratuita</Link>
             </Button>
             <Button 
               asChild 
@@ -36,7 +36,7 @@ export const Hero = () => {
               variant="outline" 
               className="text-lg animate-fade-up hover:bg-white/10"
             >
-              <a href="#planes">Ver Tarifas</a>
+              <a href="#planes">Ver Planes</a>
             </Button>
           </div>
         </div>

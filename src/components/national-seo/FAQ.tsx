@@ -19,7 +19,7 @@ export const FAQ = () => {
                 ¿Cuánto tiempo se tarda en ver resultados con el SEO nacional?
               </AccordionTrigger>
               <AccordionContent>
-                Los primeros resultados suelen verse entre 4-8 meses, aunque esto puede variar según la competitividad del sector y las palabras clave objetivo. El SEO nacional requiere una estrategia más compleja y a largo plazo que el SEO local, pero los resultados son más duraderos y escalables.
+                Los primeros resultados suelen verse entre 4-8 meses, aunque esto puede variar según la competitividad del sector y las keywords objetivo. El SEO nacional requiere una estrategia más compleja y a largo plazo que el SEO local, pero los resultados son más duraderos y escalables.
               </AccordionContent>
             </AccordionItem>
 
@@ -28,7 +28,7 @@ export const FAQ = () => {
                 ¿Qué diferencia hay entre SEO nacional y SEO local?
               </AccordionTrigger>
               <AccordionContent>
-                El SEO nacional se centra en posicionar tu web para búsquedas a nivel país, sin limitación geográfica. Requiere estrategias más amplias de contenido, creación de enlaces y autoridad de dominio. El SEO local, en cambio, se centra en posicionamiento para búsquedas con intención local específica.
+                El SEO nacional se enfoca en posicionar tu web para búsquedas a nivel país, sin limitación geográfica. Requiere estrategias más amplias de contenido, link building y autoridad de dominio. El SEO local, en cambio, se centra en posicionamiento para búsquedas con intención local específica.
               </AccordionContent>
             </AccordionItem>
 
@@ -37,7 +37,7 @@ export const FAQ = () => {
                 ¿Qué incluye el servicio de SEO nacional?
               </AccordionTrigger>
               <AccordionContent>
-                Nuestro servicio incluye optimización técnica completa, estrategia de contenidos, creación de enlaces de calidad, optimización de palabras clave, análisis de competencia, informes mensuales detallados y ajustes continuos de estrategia basados en resultados.
+                Nuestro servicio incluye optimización técnica completa, estrategia de contenidos, link building de calidad, optimización de palabras clave, análisis de competencia, informes mensuales detallados y ajustes continuos de estrategia basados en resultados.
               </AccordionContent>
             </AccordionItem>
 
@@ -46,7 +46,7 @@ export const FAQ = () => {
                 ¿Necesito SEO nacional si ya tengo SEO local?
               </AccordionTrigger>
               <AccordionContent>
-                Si tu objetivo es expandirte más allá de tu mercado local o tienes un negocio que puede atender a clientes en toda España, el SEO nacional es esencial. Ambas estrategias pueden complementarse para maximizar tu visibilidad tanto a nivel local como nacional.
+                Si tu objetivo es expandirte más allá de tu mercado local o tienes un negocio que puede servir a clientes en todo el país, el SEO nacional es esencial. Ambas estrategias pueden complementarse para maximizar tu visibilidad tanto a nivel local como nacional.
               </AccordionContent>
             </AccordionItem>
 
@@ -55,7 +55,7 @@ export const FAQ = () => {
                 ¿Cómo medís los resultados del SEO nacional?
               </AccordionTrigger>
               <AccordionContent>
-                Utilizamos herramientas profesionales para medir posiciones de palabras clave, tráfico orgánico, conversiones, autoridad de dominio, enlaces conseguidos y retorno de inversión. Proporcionamos informes mensuales detallados con métricas clave y recomendaciones estratégicas.
+                Utilizamos herramientas profesionales para medir rankings de keywords, tráfico orgánico, conversiones, autoridad de dominio, backlinks ganados y ROI. Proporcionamos informes mensuales detallados con métricas clave y recomendaciones estratégicas.
               </AccordionContent>
             </AccordionItem>
 
@@ -64,7 +64,7 @@ export const FAQ = () => {
                 ¿Qué tipo de empresas necesitan SEO nacional?
               </AccordionTrigger>
               <AccordionContent>
-                El SEO nacional es ideal para comercio electrónico, servicios online, marcas con presencia en múltiples ciudades, empresas B2B, fabricantes, mayoristas y cualquier negocio que quiera captar clientes en toda España sin limitación geográfica.
+                El SEO nacional es ideal para e-commerce, servicios online, marcas con presencia en múltiples ciudades, empresas B2B, fabricantes, mayoristas y cualquier negocio que quiera captar clientes en todo el país sin limitación geográfica.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
