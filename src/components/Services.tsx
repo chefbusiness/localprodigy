@@ -1,43 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Globe, LineChart, Code, Share2, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     title: "SEO Local",
     description: "Mejora tu visibilidad en búsquedas locales y Google Maps. Optimizamos tu presencia para atraer clientes de tu zona.",
     icon: Search,
-    link: "#seo-local",
+    link: "/servicios/seo-local",
   },
   {
     title: "Google Business Profile",
     description: "Gestión profesional de tu perfil de Google Business. Maximiza tu visibilidad en búsquedas locales y Google Maps.",
     icon: Globe,
-    link: "#google-business",
+    link: "/servicios/seo-local#google-business",
   },
   {
     title: "SEM Local",
     description: "Campañas de Google Ads optimizadas para tu área de servicio. Atrae clientes cualificados de tu zona.",
     icon: LineChart,
-    link: "#sem-local",
+    link: "/servicios/publicidad-digital",
   },
   {
     title: "Desarrollo Web",
     description: "Sitios web optimizados para SEO y conversión. Diseño responsive y velocidad de carga optimizada.",
     icon: Code,
-    link: "#desarrollo-web",
+    link: "/servicios/desarrollo-web",
   },
   {
     title: "Social Ads",
     description: "Publicidad en redes sociales dirigida a tu audiencia local. Aumenta tu visibilidad en redes sociales.",
     icon: Share2,
-    link: "#social-ads",
+    link: "/servicios/publicidad-digital#social-ads",
   },
   {
     title: "Reputación Online",
     description: "Gestión y monitoreo de reseñas. Mejora tu imagen online y construye confianza con tus clientes.",
     icon: MessageSquare,
-    link: "#reputacion-online",
+    link: "/servicios/seo-local#reputacion-online",
   },
 ];
 
@@ -73,9 +74,9 @@ export const Services = () => {
                   className="group-hover:text-yellow group-hover:bg-yellow/10 transition-colors duration-300"
                   asChild
                 >
-                  <a href={service.link}>
+                  <Link to={service.link}>
                     Saber más →
-                  </a>
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
