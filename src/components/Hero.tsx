@@ -38,16 +38,28 @@ export const Hero = () => {
           </div>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "500+", text: "Clientes Satisfechos" },
-              { number: "95%", text: "Tasa de Retención" },
-              { number: "3X", text: "ROI Promedio" }
+              { 
+                number: "500+", 
+                text: "Clientes Satisfechos",
+                bgColor: "bg-[#8B5CF6]"
+              },
+              { 
+                number: "95%", 
+                text: "Tasa de Retención",
+                bgColor: "bg-[#0EA5E9]"
+              },
+              { 
+                number: "3X", 
+                text: "ROI Promedio",
+                bgColor: "bg-[#F97316]"
+              }
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+                className={`p-8 rounded-2xl ${stat.bgColor} bg-opacity-90 backdrop-blur-md border border-white/20 hover:bg-opacity-100 transition-all duration-300 transform hover:-translate-y-1 shadow-lg`}
               >
-                <div className="text-4xl font-bold text-yellow mb-3">{stat.number}</div>
-                <div className="text-xl text-white/90 font-medium">{stat.text}</div>
+                <div className="text-4xl font-bold text-white mb-3">{stat.number}</div>
+                <div className="text-xl text-white font-medium">{stat.text}</div>
               </div>
             ))}
           </div>
