@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Users, BarChart3, Target } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -41,25 +42,34 @@ export const Hero = () => {
               { 
                 number: "500+", 
                 text: "Clientes Satisfechos",
-                bgColor: "bg-[#8B5CF6]"
+                bgColor: "bg-[#E5DEFF]",
+                icon: Users,
+                iconColor: "#8B5CF6"
               },
               { 
                 number: "95%", 
                 text: "Tasa de Retención",
-                bgColor: "bg-[#0EA5E9]"
+                bgColor: "bg-[#D3E4FD]",
+                icon: BarChart3,
+                iconColor: "#0EA5E9"
               },
               { 
                 number: "3X", 
                 text: "ROI Promedio",
-                bgColor: "bg-[#F97316]"
+                bgColor: "bg-[#FDE1D3]",
+                icon: Target,
+                iconColor: "#F97316"
               }
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className={`p-8 rounded-2xl ${stat.bgColor} bg-opacity-90 backdrop-blur-md border border-white/20 hover:bg-opacity-100 transition-all duration-300 transform hover:-translate-y-1 shadow-lg`}
+                className={`p-8 rounded-2xl ${stat.bgColor} backdrop-blur-md border border-white/20 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg`}
               >
-                <div className="text-4xl font-bold text-white mb-3">{stat.number}</div>
-                <div className="text-xl text-white font-medium">{stat.text}</div>
+                <div className="flex items-center justify-center mb-4">
+                  <stat.icon size={32} color={stat.iconColor} />
+                </div>
+                <div className="text-4xl font-bold text-primary mb-3">{stat.number}</div>
+                <div className="text-xl text-primary/80 font-medium">{stat.text}</div>
               </div>
             ))}
           </div>
