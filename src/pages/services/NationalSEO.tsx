@@ -16,7 +16,7 @@ const NationalSEO = () => {
         <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
               alt="SEO Nacional Hero"
               className="w-full h-full object-cover opacity-10"
             />
@@ -53,11 +53,41 @@ const NationalSEO = () => {
           </div>
         </section>
 
-        <WhatIs />
-
-        {/* Services Grid */}
-        <section className="py-24 bg-muted">
+        {/* What Is Section with Image */}
+        <section className="py-24 bg-background">
           <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                  alt="SEO Nacional Estrategia"
+                  className="rounded-lg shadow-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold mb-6">¿Qué es el SEO Nacional?</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  El SEO Nacional es una estrategia de posicionamiento web diseñada para mejorar la visibilidad de tu sitio web en las búsquedas orgánicas a nivel país. A diferencia del SEO local, que se centra en ubicaciones específicas, el SEO nacional te permite alcanzar audiencias en todo el territorio español.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Esta estrategia es fundamental para negocios que operan a nivel nacional, e-commerce, y empresas que buscan expandir su presencia digital más allá de los mercados locales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid with Background Image */}
+        <section className="py-24 bg-muted relative">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              alt="Servicios SEO Nacional"
+              className="w-full h-full object-cover opacity-5"
+            />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-6">Nuestros Servicios de SEO Nacional</h2>
               <p className="text-xl text-muted-foreground">
@@ -101,9 +131,16 @@ const NationalSEO = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="planes" className="py-24 bg-background">
-          <div className="container mx-auto px-4">
+        {/* Pricing Section with Background Image */}
+        <section id="planes" className="py-24 bg-background relative">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              alt="Planes SEO Nacional"
+              className="w-full h-full object-cover opacity-5"
+            />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Planes de SEO Nacional</h2>
               <p className="text-xl text-muted-foreground">
@@ -211,7 +248,25 @@ const NationalSEO = () => {
           </div>
         </section>
 
-        <FAQ />
+        {/* FAQ Section with Side Image */}
+        <section className="py-24 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="relative hidden md:block">
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                  alt="FAQ SEO Nacional"
+                  className="rounded-lg shadow-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-lg" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold mb-8">Preguntas Frecuentes</h2>
+                <FAQ />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
