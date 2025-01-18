@@ -8,7 +8,7 @@ const services = [
   },
   {
     title: "SEO Off Page",
-    description: "Estrategias de link building y creación de autoridad para tu dominio",
+    description: "Estrategias de creación de enlaces y desarrollo de autoridad para tu dominio",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
   },
   {
@@ -17,7 +17,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
   },
   {
-    title: "Análisis y Reporting",
+    title: "Análisis e Informes",
     description: "Informes detallados de rendimiento y evolución de posiciones",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
   }
