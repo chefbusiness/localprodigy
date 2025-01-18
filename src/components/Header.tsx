@@ -9,6 +9,7 @@ export const Header = () => {
   const mainMenuItems = [
     { label: "Inicio", href: "/" },
     { label: "Servicios", href: "/servicios" },
+    { label: "Sectores", href: "/sectores" },
     { label: "Contacto", href: "/contacto" },
   ];
 
