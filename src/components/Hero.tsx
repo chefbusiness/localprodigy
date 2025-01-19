@@ -7,41 +7,44 @@ export const Hero = () => {
     <div className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-b from-primary via-primary/95 to-background text-white overflow-hidden">
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid-white/[0.02]" />
       <div className="container mx-auto px-4 py-24 md:py-32 animate-fade-up relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-6 py-2 mb-6 md:mb-8 text-base md:text-lg font-medium rounded-full bg-yellow/10 text-yellow">
-            Agencia SEO/SEM Local Líder en España
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 leading-tight">
-            Aumenta tus Ventas con Marketing Digital Local
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl mb-8 md:mb-12 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-            Especialistas en posicionamiento SEO local y campañas SEM para negocios que buscan dominar su mercado local. Resultados garantizados y ROI medible.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto bg-yellow hover:bg-yellow-light text-yellow-foreground px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300 relative overflow-hidden group"
-              asChild
-            >
-              <Link to="/contacto">
-                <span className="relative z-10">Solicita Presupuesto Gratis</span>
-                <div className="absolute inset-0 bg-yellow-light transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300"
-              asChild
-            >
-              <Link to="/servicios">Descubre Nuestros Servicios</Link>
-            </Button>
+        <div className="max-w-4xl mx-auto text-center space-y-16 md:space-y-20">
+          {/* Hero Content */}
+          <div className="space-y-6 md:space-y-8">
+            <span className="inline-block px-6 py-2 text-base md:text-lg font-medium rounded-full bg-yellow/10 text-yellow">
+              Agencia SEO/SEM Local Líder en España
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 leading-tight">
+              Aumenta tus Ventas con Marketing Digital Local
+            </h1>
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+              Especialistas en posicionamiento SEO local y campañas SEM para negocios que buscan dominar su mercado local. Resultados garantizados y ROI medible.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-yellow hover:bg-yellow-light text-yellow-foreground px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300 relative overflow-hidden group"
+                asChild
+              >
+                <Link to="/contacto">
+                  <span className="relative z-10">Solicita Presupuesto Gratis</span>
+                  <div className="absolute inset-0 bg-yellow-light transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 md:px-8 py-5 md:py-6 text-base md:text-lg transition-colors duration-300"
+                asChild
+              >
+                <Link to="/servicios">Descubre Nuestros Servicios</Link>
+              </Button>
+            </div>
           </div>
 
-          {/* Logos Section - Moved here */}
-          <div className="mt-16 mb-16">
-            <p className="text-lg text-gray-300 mb-8">Plataformas con las que trabajamos:</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-4xl mx-auto">
+          {/* Logos Section */}
+          <div className="space-y-8">
+            <p className="text-lg text-gray-300">Plataformas con las que trabajamos:</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
               {[
                 {
                   name: "Meta Ads",
@@ -62,19 +65,20 @@ export const Hero = () => {
               ].map((platform, index) => (
                 <div 
                   key={index}
-                  className="flex items-center justify-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300"
+                  className="flex items-center justify-center p-6 bg-black/40 backdrop-blur-sm rounded-xl hover:bg-black/50 transition-colors duration-300 border border-white/10"
                 >
                   <img
                     src={platform.logo}
                     alt={platform.name}
-                    className="h-28 md:h-36 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    className="h-24 md:h-28 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto">
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
             {[
               { 
                 number: "500+", 
