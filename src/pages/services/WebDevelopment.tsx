@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const WebDevelopment = () => {
+  const scrollToPlans = () => {
+    const plansSection = document.getElementById('planes');
+    if (plansSection) {
+      plansSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <Header />
@@ -39,12 +46,12 @@ const WebDevelopment = () => {
                   <Link to="/contacto">Solicitar Presupuesto</Link>
                 </Button>
                 <Button 
-                  asChild 
                   size="lg" 
                   variant="outline" 
                   className="text-lg animate-fade-up hover:bg-white/10"
+                  onClick={scrollToPlans}
                 >
-                  <Link to="#planes">Ver Planes</Link>
+                  Ver Planes
                 </Button>
               </div>
             </div>
