@@ -5,6 +5,7 @@ import { Benefits } from "@/components/local-seo/Benefits";
 import { PricingPlans } from "@/components/local-seo/PricingPlans";
 import { ImportanceSection } from "@/components/local-seo/ImportanceSection";
 import { FAQ } from "@/components/local-seo/FAQ";
+import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { Helmet } from "react-helmet";
 
 const LocalSEO = () => {
@@ -166,6 +167,7 @@ const LocalSEO = () => {
       <main className="min-h-screen bg-background">
         <Hero />
         <Benefits />
+        <ToolsCarousel />
         <PricingPlans />
         <ImportanceSection />
         <FAQ />
