@@ -41,42 +41,6 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Logos Section */}
-          <div className="space-y-8">
-            <p className="text-lg text-gray-300">Plataformas con las que trabajamos:</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
-              {[
-                {
-                  name: "Meta Ads",
-                  logo: "/lovable-uploads/203f9369-c9f2-4df5-ad01-85f06f9a69a2.png"
-                },
-                {
-                  name: "Google Ads",
-                  logo: "/lovable-uploads/0c6dd505-ae2f-4765-a37d-5d985496a700.png"
-                },
-                {
-                  name: "Pinterest Ads",
-                  logo: "/lovable-uploads/ca4ae698-198d-4c73-bfdb-897082cfe849.png"
-                },
-                {
-                  name: "TikTok Ads",
-                  logo: "/lovable-uploads/136e2839-0c20-4c4e-8208-31e099ce1737.png"
-                }
-              ].map((platform, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center p-6 bg-black/40 backdrop-blur-sm rounded-xl hover:bg-black/50 transition-colors duration-300 border border-white/10"
-                >
-                  <img
-                    src={platform.logo}
-                    alt={platform.name}
-                    className="h-24 md:h-28 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Stats Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
             {[

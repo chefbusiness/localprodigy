@@ -25,11 +25,52 @@ const testimonials = [
   }
 ];
 
+const platforms = [
+  {
+    name: "Meta Ads",
+    logo: "/lovable-uploads/203f9369-c9f2-4df5-ad01-85f06f9a69a2.png"
+  },
+  {
+    name: "Google Ads",
+    logo: "/lovable-uploads/0c6dd505-ae2f-4765-a37d-5d985496a700.png"
+  },
+  {
+    name: "Pinterest Ads",
+    logo: "/lovable-uploads/ca4ae698-198d-4c73-bfdb-897082cfe849.png"
+  },
+  {
+    name: "TikTok Ads",
+    logo: "/lovable-uploads/136e2839-0c20-4c4e-8208-31e099ce1737.png"
+  }
+];
+
 export const Testimonials = () => {
   return (
     <section className="py-32 bg-muted/50 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-black/[0.02] bg-grid-black/[0.02]" />
       <div className="container mx-auto px-4 relative z-10">
+        {/* Platforms Section */}
+        <div className="max-w-4xl mx-auto text-center mb-32">
+          <h3 className="text-2xl font-semibold text-primary mb-12">
+            Plataformas con las que trabajamos
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {platforms.map((platform, index) => (
+              <div 
+                key={index}
+                className="flex items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+              >
+                <img
+                  src={platform.logo}
+                  alt={platform.name}
+                  className="h-16 md:h-20 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/70">
             Historias de Éxito en Marketing Digital Local
