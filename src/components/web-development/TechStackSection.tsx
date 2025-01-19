@@ -50,7 +50,7 @@ export const TechStackSection = () => {
               className="group hover:shadow-lg transition-all duration-300 animate-fade-up border-2 border-transparent hover:border-yellow/20"
             >
               <CardContent className="p-6">
-                <div className="h-24 flex items-center justify-center mb-4">
+                <div className="h-32 flex items-center justify-center mb-4">
                   {imageErrors[tech.name] ? (
                     <div className="text-muted-foreground text-sm">
                       {tech.name}
@@ -59,7 +59,7 @@ export const TechStackSection = () => {
                     <img 
                       src={tech.logo} 
                       alt={`Logo de ${tech.name}`} 
-                      className="h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="h-28 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(tech.name)}
                     />
                   )}
