@@ -4,27 +4,27 @@ const technologies = [
   {
     name: "WordPress",
     description: "CMS líder mundial para sitios web y blogs",
-    logo: "/tools/wordpress.svg"
+    logo: "/tools/wordpress.png"
   },
   {
     name: "Next.js",
     description: "Framework React para aplicaciones web modernas",
-    logo: "/tools/nextjs.svg"
+    logo: "/tools/nextjs.png"
   },
   {
     name: "Astro",
     description: "Framework para sitios web de alto rendimiento",
-    logo: "/tools/astro.svg"
+    logo: "/tools/astro.png"
   },
   {
     name: "WooCommerce",
     description: "Plataforma e-commerce para WordPress",
-    logo: "/tools/woocommerce.svg"
+    logo: "/tools/woocommerce.png"
   },
   {
     name: "Shopify",
     description: "Plataforma e-commerce todo en uno",
-    logo: "/tools/shopify.svg"
+    logo: "/tools/shopify.png"
   }
 ];
 
