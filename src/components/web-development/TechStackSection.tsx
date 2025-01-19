@@ -5,32 +5,38 @@ const technologies = [
   {
     name: "WordPress",
     description: "CMS líder mundial para sitios web y blogs",
-    logo: "/lovable-uploads/7e68e1c4-0b83-4339-9e57-7337c5e601c3.png"
+    logo: "/lovable-uploads/7e68e1c4-0b83-4339-9e57-7337c5e601c3.png",
+    alt: "Logo de WordPress, el sistema de gestión de contenidos más popular del mundo"
   },
   {
     name: "Next.js",
     description: "Framework React para aplicaciones web modernas",
-    logo: "/lovable-uploads/9961c294-0288-49e4-8f52-5c38d91134c8.png"
+    logo: "/lovable-uploads/9961c294-0288-49e4-8f52-5c38d91134c8.png",
+    alt: "Logo de Next.js, framework de React para desarrollo web moderno"
   },
   {
     name: "Astro",
     description: "Framework para sitios web de alto rendimiento",
-    logo: "/lovable-uploads/5ceec2be-230b-4be2-a5da-435eb8a9805e.png"
+    logo: "/lovable-uploads/5ceec2be-230b-4be2-a5da-435eb8a9805e.png",
+    alt: "Logo de Astro, framework para sitios web estáticos de alto rendimiento"
   },
   {
     name: "WooCommerce",
     description: "Plataforma e-commerce para WordPress",
-    logo: "/lovable-uploads/b8c1029e-ad7a-40d0-a012-f29a8c1ff8a0.png"
+    logo: "/lovable-uploads/b8c1029e-ad7a-40d0-a012-f29a8c1ff8a0.png",
+    alt: "Logo de WooCommerce, la plataforma líder de comercio electrónico para WordPress"
   },
   {
     name: "Shopify",
     description: "Plataforma e-commerce todo en uno",
-    logo: "/lovable-uploads/1cef11f9-badb-41c1-b0e0-5736ca80e946.png"
+    logo: "/lovable-uploads/1cef11f9-badb-41c1-b0e0-5736ca80e946.png",
+    alt: "Logo de Shopify, plataforma integral de comercio electrónico"
   },
   {
     name: "Stripe",
     description: "Plataforma de pagos segura y flexible",
-    logo: "/lovable-uploads/9555a307-f08d-4192-a16f-028efe7b1931.png"
+    logo: "/lovable-uploads/9555a307-f08d-4192-a16f-028efe7b1931.png",
+    alt: "Logo de Stripe, plataforma de procesamiento de pagos online"
   }
 ];
 
@@ -63,7 +69,8 @@ export const TechStackSection = () => {
                   ) : (
                     <img 
                       src={tech.logo} 
-                      alt={`Logo de ${tech.name}`} 
+                      alt={tech.alt}
+                      loading="lazy"
                       className="h-28 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(tech.name)}
                     />

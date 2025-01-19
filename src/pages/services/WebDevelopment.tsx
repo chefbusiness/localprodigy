@@ -6,6 +6,7 @@ import { TechStackSection } from "@/components/web-development/TechStackSection"
 import { WebDevHero } from "@/components/web-development/WebDevHero";
 import { WebDevFeatures } from "@/components/web-development/WebDevFeatures";
 import { WebDevPricing } from "@/components/web-development/WebDevPricing";
+import { WebDevBreadcrumbs } from "@/components/web-development/WebDevBreadcrumbs";
 import { Helmet } from "react-helmet";
 
 const WebDevelopment = () => {
@@ -16,7 +17,65 @@ const WebDevelopment = () => {
     }
   };
 
-  // Schema markup para el servicio de desarrollo web
+  // Schema markup para breadcrumbs
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://localprodigy.es"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://localprodigy.es/servicios"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Desarrollo Web",
+        "item": "https://localprodigy.es/servicios/desarrollo-web"
+      }
+    ]
+  };
+
+  // Schema markup para FAQs
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda en desarrollarse un sitio web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo de desarrollo varía según la complejidad del proyecto. Una landing page puede estar lista en 2-3 semanas, mientras que un e-commerce completo puede llevar 6-8 semanas. Siempre proporcionamos un cronograma detallado al inicio del proyecto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tecnología es mejor para mi sitio web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La elección de la tecnología depende de tus necesidades específicas. WordPress es excelente para sitios con mucho contenido y blogs, Next.js para aplicaciones web modernas y de alto rendimiento, y Shopify para e-commerce con necesidades estándar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Incluyen el mantenimiento del sitio web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, todos nuestros planes incluyen mantenimiento básico durante el primer año. Esto incluye actualizaciones de seguridad, copias de seguridad y soporte técnico."
+        }
+      }
+    ]
+  };
+
+  // Schema markup para el servicio
   const webDevSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -95,10 +154,17 @@ const WebDevelopment = () => {
         <script type="application/ld+json">
           {JSON.stringify(webDevSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
 
       <Header />
       <main className="min-h-screen bg-background">
+        <WebDevBreadcrumbs />
         <WebDevHero onScrollToPlans={scrollToPlans} />
         <WebDevFeatures />
         <WebDevPricing />

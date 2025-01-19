@@ -11,8 +11,10 @@ export const WebDevHero = ({ onScrollToPlans }: WebDevHeroProps) => {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-          alt="Desarrollo Web Hero"
+          alt="Espacio de trabajo moderno con laptop mostrando código de desarrollo web"
           className="w-full h-full object-cover opacity-10"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
       <div className="container relative z-10 mx-auto px-4">
