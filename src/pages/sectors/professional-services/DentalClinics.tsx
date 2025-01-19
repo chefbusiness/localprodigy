@@ -97,7 +97,6 @@ const DentalClinics = () => {
             icon: ChartBar
           }
         ]}
-        faqSchema={faqData}
         callToAction={{
           title: "¿Listo para aumentar los pacientes de tu clínica dental?",
           description: "Solicita una consultoría gratuita y descubre cómo podemos ayudarte a crecer",
