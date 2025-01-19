@@ -37,6 +37,7 @@ interface BusinessLandingPageProps {
     answer: string;
   }[];
   callToAction: CallToAction;
+  children?: React.ReactNode; // Add this line
 }
 
 export const BusinessLandingPage = ({
@@ -48,6 +49,7 @@ export const BusinessLandingPage = ({
   benefits,
   faqSchema,
   callToAction,
+  children, // Add this line
 }: BusinessLandingPageProps) => {
   // Schema.org markup
   const schemaData = {
@@ -241,22 +243,8 @@ export const BusinessLandingPage = ({
           </section>
         )}
 
-        {/* CTA Section */}
-        <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">{callToAction.title}</h2>
-            <p className="text-xl mb-8 opacity-90">{callToAction.description}</p>
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-yellow hover:bg-yellow-light text-yellow-foreground"
-            >
-              <Link to={callToAction.buttonLink}>
-                {callToAction.buttonText}
-              </Link>
-            </Button>
-          </div>
-        </section>
+        {/* Add children before Footer */}
+        {children}
       </main>
 
       <Footer />
