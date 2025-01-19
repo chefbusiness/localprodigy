@@ -1,5 +1,5 @@
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
-import { Stethoscope, MapPin, Users, ChartBar, Award, MegaphoneIcon, Heart } from "lucide-react";
+import { Stethoscope, MapPin, Users, ChartBar, Award, MegaphoneIcon } from "lucide-react";
 import { PricingPlans } from "@/components/local-seo/PricingPlans";
 import { GoogleAdsPlans } from "@/components/digital-ads/pricing/GoogleAdsPlans";
 import { Button } from "@/components/ui/button";
@@ -134,6 +134,26 @@ const DentalClinics = () => {
               </Button>
             </div>
             <GoogleAdsPlans />
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+              Preguntas Frecuentes sobre SEO para Clínicas Dentales
+            </h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {faqSchema.map((faq) => (
+                <div 
+                  key={faq.question} 
+                  className="bg-background p-6 rounded-lg hover:shadow-md transition-all duration-300"
+                >
+                  <h3 className="font-semibold mb-3">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </BusinessLandingPage>
