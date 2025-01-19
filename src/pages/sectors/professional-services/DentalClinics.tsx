@@ -1,5 +1,5 @@
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
-import { Tooth, MapPin, Users, ChartBar, Award, MegaphoneIcon, Heart } from "lucide-react";
+import { Stethoscope, MapPin, Users, ChartBar, Award, MegaphoneIcon, Heart } from "lucide-react";
 
 const DentalClinics = () => {
   return (
@@ -33,7 +33,7 @@ const DentalClinics = () => {
         {
           title: "Marketing de Contenidos",
           description: "Contenido especializado en servicios dentales",
-          icon: Tooth
+          icon: Stethoscope
         },
         {
           title: "Gestión de Reputación",
