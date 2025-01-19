@@ -73,6 +73,41 @@ export const Hero = () => {
               </div>
             ))}
           </div>
+
+          {/* Logos Section */}
+          <div className="mt-16 md:mt-24 mb-16 md:mb-24">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-4xl mx-auto">
+              {[
+                {
+                  name: "Meta Ads",
+                  logo: "/lovable-uploads/203f9369-c9f2-4df5-ad01-85f06f9a69a2.png"
+                },
+                {
+                  name: "Google Ads",
+                  logo: "/lovable-uploads/0c6dd505-ae2f-4765-a37d-5d985496a700.png"
+                },
+                {
+                  name: "Pinterest Ads",
+                  logo: "/lovable-uploads/ca4ae698-198d-4c73-bfdb-897082cfe849.png"
+                },
+                {
+                  name: "TikTok Ads",
+                  logo: "/lovable-uploads/136e2839-0c20-4c4e-8208-31e099ce1737.png"
+                }
+              ].map((platform, index) => (
+                <div 
+                  key={index}
+                  className="flex items-center justify-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-300"
+                >
+                  <img
+                    src={platform.logo}
+                    alt={platform.name}
+                    className="h-12 md:h-16 w-auto object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-background to-transparent" />
