@@ -5,27 +5,27 @@ const technologies = [
   {
     name: "WordPress",
     description: "CMS líder mundial para sitios web y blogs",
-    logo: "/tools/wordpress.png"
+    logo: "/lovable-uploads/7e68e1c4-0b83-4339-9e57-7337c5e601c3.png"
   },
   {
     name: "Next.js",
     description: "Framework React para aplicaciones web modernas",
-    logo: "/tools/nextjs.png"
+    logo: "/lovable-uploads/9961c294-0288-49e4-8f52-5c38d91134c8.png"
   },
   {
     name: "Astro",
     description: "Framework para sitios web de alto rendimiento",
-    logo: "/tools/astro.png"
+    logo: "/lovable-uploads/5ceec2be-230b-4be2-a5da-435eb8a9805e.png"
   },
   {
     name: "WooCommerce",
     description: "Plataforma e-commerce para WordPress",
-    logo: "/tools/woocommerce.png"
+    logo: "/lovable-uploads/b8c1029e-ad7a-40d0-a012-f29a8c1ff8a0.png"
   },
   {
     name: "Shopify",
     description: "Plataforma e-commerce todo en uno",
-    logo: "/tools/shopify.png"
+    logo: "/lovable-uploads/1cef11f9-badb-41c1-b0e0-5736ca80e946.png"
   }
 ];
 
