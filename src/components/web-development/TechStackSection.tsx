@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 const technologies = [
   {
@@ -29,6 +30,13 @@ const technologies = [
 ];
 
 export const TechStackSection = () => {
+  const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
+
+  const handleImageError = (techName: string) => {
+    console.error(`Error loading image for ${techName}`);
+    setImageErrors(prev => ({...prev, [techName]: true}));
+  };
+
   return (
     <section className="py-24 bg-muted">
       <div className="container">
@@ -43,11 +51,18 @@ export const TechStackSection = () => {
             >
               <CardContent className="p-6">
                 <div className="h-16 flex items-center justify-center mb-4">
-                  <img 
-                    src={tech.logo} 
-                    alt={`Logo de ${tech.name}`} 
-                    className="h-12 object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                  {imageErrors[tech.name] ? (
+                    <div className="text-muted-foreground text-sm">
+                      {tech.name}
+                    </div>
+                  ) : (
+                    <img 
+                      src={tech.logo} 
+                      alt={`Logo de ${tech.name}`} 
+                      className="h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+                      onError={() => handleImageError(tech.name)}
+                    />
+                  )}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-center group-hover:text-yellow transition-colors duration-300">
                   {tech.name}
