@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DigitalPresenceSection } from "@/components/web-development/DigitalPresenceSection";
+import { WebDevFAQ } from "@/components/web-development/WebDevFAQ";
+import { TechStackSection } from "@/components/web-development/TechStackSection";
 
 const WebDevelopment = () => {
   const scrollToPlans = () => {
@@ -225,6 +228,10 @@ const WebDevelopment = () => {
             </div>
           </div>
         </section>
+
+        <DigitalPresenceSection />
+        <WebDevFAQ />
+        <TechStackSection />
       </main>
       <Footer />
     </>
