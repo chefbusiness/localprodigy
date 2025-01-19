@@ -230,8 +230,8 @@ const WebDevelopment = () => {
         </section>
 
         <DigitalPresenceSection />
-        <WebDevFAQ />
         <TechStackSection />
+        <WebDevFAQ />
       </main>
       <Footer />
     </>
