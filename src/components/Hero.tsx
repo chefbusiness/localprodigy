@@ -75,7 +75,7 @@ export const Hero = () => {
           </div>
 
           {/* Logos Section */}
-          <div className="mt-16 md:mt-20">
+          <div className="mt-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-4xl mx-auto">
               {[
                 {
@@ -102,7 +102,7 @@ export const Hero = () => {
                   <img
                     src={platform.logo}
                     alt={platform.name}
-                    className="h-24 md:h-32 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="h-28 md:h-36 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               ))}
