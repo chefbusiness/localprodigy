@@ -16,7 +16,7 @@ const Index = () => {
         <Services />
         <Testimonials />
         <ToolsCarousel />
-        <section className="py-16 px-4 bg-muted text-center">
+        <section className="py-32 px-4 bg-muted text-center">
           <h2 className="text-3xl font-bold mb-6">¿Listo para empezar?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Solicita tu consulta gratuita y descubre cómo podemos ayudarte
