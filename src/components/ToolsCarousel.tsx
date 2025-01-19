@@ -90,11 +90,11 @@ export const ToolsCarousel = () => {
             {tools.map((tool, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="p-4">
-                  <div className="h-32 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="h-40 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                     <img
                       src={tool.logo}
                       alt={tool.alt}
-                      className="h-20 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                      className="h-28 w-auto object-contain hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm font-medium text-center mt-3 text-muted-foreground">{tool.name}</p>
