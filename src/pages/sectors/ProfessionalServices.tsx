@@ -24,7 +24,48 @@ const services = [
     slug: "asesorias",
     keywords: ["asesoría fiscal", "gestoría", "contabilidad", "consultoría empresarial"]
   },
-  // ... más servicios
+  {
+    title: "Psicólogos y Terapeutas",
+    description: "Marketing digital especializado para profesionales de la salud mental",
+    slug: "psicologos",
+    keywords: ["psicólogo", "terapeuta", "psicoterapia", "salud mental"]
+  },
+  {
+    title: "Veterinarias",
+    description: "Estrategias digitales para clínicas veterinarias y especialistas en salud animal",
+    slug: "veterinarias",
+    keywords: ["veterinario", "clínica veterinaria", "hospital veterinario", "servicios veterinarios"]
+  },
+  {
+    title: "Arquitectos",
+    description: "Soluciones de marketing digital para estudios de arquitectura y profesionales independientes",
+    slug: "arquitectos",
+    keywords: ["arquitecto", "estudio de arquitectura", "diseño arquitectónico", "proyectos arquitectónicos"]
+  },
+  {
+    title: "Agentes Inmobiliarios",
+    description: "Marketing digital especializado para agentes y agencias inmobiliarias",
+    slug: "inmobiliarias",
+    keywords: ["agente inmobiliario", "inmobiliaria", "bienes raíces", "venta de propiedades"]
+  },
+  {
+    title: "Recursos Humanos",
+    description: "Estrategias digitales para consultoras y profesionales de RRHH",
+    slug: "recursos-humanos",
+    keywords: ["consultora RRHH", "selección de personal", "recursos humanos", "gestión del talento"]
+  },
+  {
+    title: "Centros de Formación",
+    description: "Marketing digital para academias y centros educativos",
+    slug: "formacion",
+    keywords: ["academia", "centro de formación", "cursos", "formación profesional"]
+  },
+  {
+    title: "Gestorías",
+    description: "Soluciones digitales para gestorías administrativas",
+    slug: "gestorias",
+    keywords: ["gestoría", "trámites administrativos", "gestión documental", "asesoría administrativa"]
+  }
 ];
 
 const ProfessionalServices = () => {
