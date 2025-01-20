@@ -1,6 +1,25 @@
 import { Helmet } from "react-helmet";
 
 export const ConsultancySchema = () => {
+  const faqs = [
+    {
+      question: "¿Qué resultados puedo esperar del marketing digital para mi asesoría?",
+      answer: "Con una estrategia de marketing digital bien ejecutada, puede esperar un aumento en consultas cualificadas, mejor visibilidad en búsquedas locales, y un fortalecimiento de su marca profesional. Nuestros clientes suelen ver un incremento significativo en consultas online en los primeros 3-6 meses."
+    },
+    {
+      question: "¿Cómo se diferencia el marketing digital para asesorías de otros sectores?",
+      answer: "El marketing para asesorías requiere un enfoque especializado que considere las regulaciones profesionales, la confidencialidad de la información y la necesidad de construir confianza. Nos centramos en estrategias que resaltan su experiencia y credenciales mientras mantenemos los más altos estándares éticos."
+    },
+    {
+      question: "¿Cuánto tiempo lleva ver resultados en SEO para asesorías?",
+      answer: "El SEO es una estrategia a medio-largo plazo. Aunque algunos resultados pueden verse en 3-4 meses, los resultados más significativos suelen aparecer entre 6-12 meses. Factores como la competencia en su área y especialidad pueden influir en estos plazos."
+    },
+    {
+      question: "¿Qué presupuesto debo considerar para marketing digital?",
+      answer: "El presupuesto varía según sus objetivos y el alcance deseado. Nuestros planes comienzan desde 597€/mes para gestión básica de presencia online. Para una estrategia completa que incluya SEO, PPC y gestión de contenidos, recomendamos un presupuesto mensual desde 997€."
+    }
+  ];
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",

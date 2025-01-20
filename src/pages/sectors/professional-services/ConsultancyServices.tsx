@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ConsultancyHero } from "@/components/consultancy/ConsultancyHero";
 import { ConsultancyServices } from "@/components/consultancy/ConsultancyServices";
 import { ConsultancyFAQ } from "@/components/consultancy/ConsultancyFAQ";
