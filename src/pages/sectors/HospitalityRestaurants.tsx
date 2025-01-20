@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { 
   UtensilsCrossed, 
-  Coffee, 
-  ChefHat, 
-  Hotel, 
-  Cake, 
+  Coffee,
+  ChefHat,
+  Hotel,
+  Cake,
   Store,
   GlassWater,
   Soup,
@@ -23,7 +23,19 @@ import {
   Wheat,
   Flame,
   Sandwich,
-  Leaf
+  Leaf,
+  Wine,
+  Utensils,
+  Pizza,
+  ChefHat as ChefIcon,
+  Shell,
+  Drumstick,
+  Soup as BuffetIcon,
+  Palette,
+  Timer,
+  Coffee as BrunchIcon,
+  Globe2,
+  Sprout
 } from "lucide-react";
 
 const services = [
@@ -131,6 +143,83 @@ const services = [
     keywords: ["heladería", "helados artesanales", "postres"],
     icon: IceCream,
     slug: "heladerias"
+  },
+  {
+    title: "Restaurantes de cocina internacional",
+    description: "Establecimientos que ofrecen una variada selección de platos de diferentes culturas, incluyendo cocina italiana, francesa, japonesa y otras gastronomías internacionales.",
+    keywords: ["cocina internacional", "gastronomía mundial", "fusion", "cocina italiana", "cocina francesa", "cocina japonesa"],
+    icon: Globe,
+    slug: "cocina-internacional"
+  },
+  {
+    title: "Restaurantes de cocina latinoamericana",
+    description: "Espacios gastronómicos especializados en la rica y diversa cocina de América Latina, desde la cocina peruana hasta los asados argentinos.",
+    keywords: ["cocina latina", "comida peruana", "cocina mexicana", "asados argentinos", "arepas venezolanas", "cocina colombiana"],
+    icon: ChefIcon,
+    slug: "cocina-latinoamericana"
+  },
+  {
+    title: "Gastrobares",
+    description: "Establecimientos que combinan la alta cocina con un ambiente más informal y desenfadado, ofreciendo tapas gourmet y platos creativos.",
+    keywords: ["gastrobar", "tapas gourmet", "cocina creativa", "bar gastronómico", "cocina informal"],
+    icon: Wine,
+    slug: "gastrobares"
+  },
+  {
+    title: "Restaurantes de mariscos y pescados",
+    description: "Especialistas en productos frescos del mar, ofreciendo una amplia variedad de pescados y mariscos preparados de forma tradicional e innovadora.",
+    keywords: ["marisquería", "pescados frescos", "marisco", "cocina marinera", "productos del mar"],
+    icon: Shell,
+    slug: "mariscos-pescados"
+  },
+  {
+    title: "Asadores y parrillas",
+    description: "Restaurantes especializados en carnes a la brasa y parrilla, ofreciendo cortes selectos y preparaciones tradicionales.",
+    keywords: ["asador", "parrilla", "carnes a la brasa", "barbacoa", "carne a la parrilla"],
+    icon: Drumstick,
+    slug: "asadores-parrillas"
+  },
+  {
+    title: "Restaurantes buffet",
+    description: "Establecimientos que ofrecen una amplia variedad de platos en formato buffet, permitiendo a los clientes elegir entre múltiples opciones.",
+    keywords: ["buffet", "autoservicio", "variedad gastronómica", "buffet libre", "all you can eat"],
+    icon: BuffetIcon,
+    slug: "buffet"
+  },
+  {
+    title: "Restaurantes temáticos",
+    description: "Locales con ambientación y decoración específica, que ofrecen una experiencia gastronómica única basada en un tema o concepto particular.",
+    keywords: ["restaurante temático", "experiencia gastronómica", "ambientación especial", "decoración temática"],
+    icon: Palette,
+    slug: "tematicos"
+  },
+  {
+    title: "Restaurantes de cocina rápida o fast food",
+    description: "Establecimientos que ofrecen servicio rápido y eficiente, con opciones de comida preparada al momento incluyendo alternativas saludables.",
+    keywords: ["fast food", "comida rápida", "servicio rápido", "take away", "para llevar"],
+    icon: Timer,
+    slug: "fast-food"
+  },
+  {
+    title: "Restaurantes de brunch",
+    description: "Especializados en el servicio de brunch, combinando desayuno y almuerzo con opciones variadas y creativas, especialmente populares los fines de semana.",
+    keywords: ["brunch", "desayuno tardío", "almuerzo temprano", "café especialidad", "huevos benedict"],
+    icon: BrunchIcon,
+    slug: "brunch"
+  },
+  {
+    title: "Restaurantes de cocina asiática",
+    description: "Establecimientos especializados en las diversas gastronomías asiáticas, incluyendo cocina china, tailandesa, vietnamita y otras variedades orientales.",
+    keywords: ["cocina asiática", "comida china", "cocina tailandesa", "cocina vietnamita", "sushi"],
+    icon: Globe2,
+    slug: "cocina-asiatica"
+  },
+  {
+    title: "Restaurantes ecológicos y km 0",
+    description: "Restaurantes comprometidos con la sostenibilidad, utilizando productos locales, orgánicos y de temporada en sus elaboraciones.",
+    keywords: ["ecológico", "kilómetro cero", "productos locales", "orgánico", "sostenible"],
+    icon: Sprout,
+    slug: "ecologicos-km0"
   }
 ];
 
