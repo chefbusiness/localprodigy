@@ -4,50 +4,122 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { UtensilsCrossed, Coffee, ChefHat, Hotel, Cake, Store } from "lucide-react";
+import { 
+  UtensilsCrossed, 
+  Coffee, 
+  ChefHat, 
+  Hotel, 
+  Cake, 
+  Store,
+  GlassWater,
+  Soup,
+  Fish,
+  Beef,
+  Salad,
+  Globe,
+  Truck,
+  PartyPopper,
+  IceCream
+} from "lucide-react";
 
 const services = [
   {
     title: "Restaurantes Tradicionales",
-    description: "Marketing digital para restaurantes de cocina tradicional española y moderna",
-    keywords: ["restaurante", "cocina tradicional", "gastronomía española", "restaurante local"],
+    description: "Cocina tradicional española con platos clásicos como paella, cocido y fabada",
+    keywords: ["restaurante tradicional", "cocina española", "gastronomía local"],
     icon: ChefHat,
     slug: "restaurantes-tradicionales"
   },
   {
+    title: "Alta Cocina y Gourmet",
+    description: "Establecimientos con estrellas Michelin y experiencias gastronómicas únicas",
+    keywords: ["restaurante gourmet", "alta cocina", "estrella michelin"],
+    icon: UtensilsCrossed,
+    slug: "alta-cocina"
+  },
+  {
+    title: "Cocina de Autor",
+    description: "Chefs creativos que fusionan técnicas e ingredientes de forma innovadora",
+    keywords: ["cocina de autor", "fusión", "innovación culinaria"],
+    icon: Soup,
+    slug: "cocina-autor"
+  },
+  {
+    title: "Bares de Tapas",
+    description: "Especializados en una amplia variedad de pequeños platos para compartir",
+    keywords: ["bar de tapas", "tapas", "pinchos"],
+    icon: GlassWater,
+    slug: "bares-tapas"
+  },
+  {
+    title: "Cocina Mediterránea",
+    description: "Centrados en ingredientes frescos y saludables típicos de la dieta mediterránea",
+    keywords: ["cocina mediterránea", "saludable", "productos frescos"],
+    icon: Salad,
+    slug: "cocina-mediterranea"
+  },
+  {
+    title: "Marisquerías y Pescaderías",
+    description: "Especializados en productos del mar, muy populares en zonas costeras",
+    keywords: ["marisquería", "pescados", "marisco fresco"],
+    icon: Fish,
+    slug: "marisquerias"
+  },
+  {
+    title: "Asadores y Parrillas",
+    description: "Centrados en carnes a la brasa y platos tradicionales",
+    keywords: ["asador", "parrilla", "carnes"],
+    icon: Beef,
+    slug: "asadores"
+  },
+  {
+    title: "Cocina Internacional",
+    description: "Restaurantes de cocina italiana, francesa, japonesa y otras culturas",
+    keywords: ["cocina internacional", "fusión", "gastronomía mundial"],
+    icon: Globe,
+    slug: "cocina-internacional"
+  },
+  {
     title: "Cafeterías y Coffee Shops",
-    description: "Estrategias digitales para cafeterías y establecimientos de café especializado",
-    keywords: ["cafetería", "coffee shop", "café especialidad", "brunch"],
+    description: "Establecimientos especializados en café y ambiente acogedor",
+    keywords: ["cafetería", "coffee shop", "brunch"],
     icon: Coffee,
     slug: "cafeterias"
   },
   {
     title: "Hoteles y Alojamientos",
-    description: "Soluciones digitales para hoteles boutique y alojamientos turísticos",
-    keywords: ["hotel", "alojamiento", "hostal", "casa rural"],
+    description: "Hoteles boutique, hostales y alojamientos turísticos",
+    keywords: ["hotel", "alojamiento", "hostal"],
     icon: Hotel,
     slug: "hoteles"
   },
   {
     title: "Pastelerías y Panaderías",
-    description: "Estrategias digitales para pastelerías y panaderías artesanales",
-    keywords: ["pastelería", "panadería", "repostería", "bollería"],
+    description: "Establecimientos especializados en panadería y repostería artesanal",
+    keywords: ["pastelería", "panadería", "repostería"],
     icon: Cake,
     slug: "pastelerias"
   },
   {
-    title: "Bares y Restaurantes Temáticos",
-    description: "Posicionamiento local para bares y restaurantes especializados",
-    keywords: ["bar", "pub", "restaurante temático", "cocina especializada"],
-    icon: UtensilsCrossed,
-    slug: "bares"
+    title: "Food Trucks",
+    description: "Cocina móvil y street food con propuestas innovadoras",
+    keywords: ["food truck", "comida callejera", "street food"],
+    icon: Truck,
+    slug: "food-trucks"
   },
   {
-    title: "Tiendas Gourmet",
-    description: "Marketing digital para tiendas de productos gourmet y delicatessen",
-    keywords: ["tienda gourmet", "delicatessen", "productos artesanales", "alimentación especial"],
-    icon: Store,
-    slug: "tiendas-gourmet"
+    title: "Catering y Eventos",
+    description: "Servicios profesionales para eventos y celebraciones",
+    keywords: ["catering", "eventos", "celebraciones"],
+    icon: PartyPopper,
+    slug: "catering"
+  },
+  {
+    title: "Heladerías Artesanales",
+    description: "Helados y postres helados elaborados artesanalmente",
+    keywords: ["heladería", "helados artesanales", "postres"],
+    icon: IceCream,
+    slug: "heladerias"
   }
 ];
 
@@ -68,7 +140,7 @@ const HospitalityRestaurants = () => {
   return (
     <>
       <Helmet>
-        <title>Hostelería y Restauración | Servicios de Marketing Digital | localSEOads</title>
+        <title>Hostelería y Restauración | Marketing Digital para Restaurantes | localSEOads</title>
         <meta 
           name="description" 
           content="Soluciones especializadas de marketing digital para restaurantes, hoteles, bares y negocios del sector hostelero. Mejora tu visibilidad online y atrae más clientes." 
