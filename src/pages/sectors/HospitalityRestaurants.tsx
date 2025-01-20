@@ -65,16 +65,29 @@ const HospitalityRestaurants = () => {
       <Header />
       
       <main className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-24">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              SEO Local para Hostelería y Restauración
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Soluciones de marketing digital especializadas para negocios y profesionales del sector hostelero y restauración
-            </p>
+        {/* Hero Section with Background Image */}
+        <section className="relative py-20 overflow-hidden bg-gradient-to-b from-muted to-background">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80"
+              alt="Hostelería y Restauración Hero"
+              className="w-full h-full object-cover opacity-10"
+            />
           </div>
+          <div className="container relative z-10 mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Hostelería y Restauración
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                Soluciones de marketing digital especializadas para negocios y profesionales del sector hostelero y restauración
+              </p>
+            </div>
+          </div>
+        </section>
 
+        {/* Services Grid */}
+        <div className="container mx-auto px-4 py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card 
