@@ -35,7 +35,11 @@ import {
   Timer,
   Coffee as BrunchIcon,
   Globe2,
-  Sprout
+  Sprout,
+  Beer,
+  Building,
+  Home,
+  Hamburger
 } from "lucide-react";
 
 const services = [
@@ -104,122 +108,80 @@ const services = [
   },
   {
     title: "Cafeterías y Coffee Shops",
-    description: "Establecimientos especializados en café y ambiente acogedor",
-    keywords: ["cafetería", "coffee shop", "brunch"],
+    description: "Establecimientos especializados en café de alta calidad, bebidas artesanales y ambiente acogedor para trabajo y reuniones sociales.",
+    keywords: ["cafetería", "coffee shop", "café especialidad", "brunch", "meriendas"],
     icon: Coffee,
     slug: "cafeterias"
   },
   {
-    title: "Hoteles y Alojamientos",
-    description: "Hoteles boutique, hostales y alojamientos turísticos",
-    keywords: ["hotel", "alojamiento", "hostal"],
-    icon: Hotel,
-    slug: "hoteles"
+    title: "Bares y Pubs",
+    description: "Locales de ocio nocturno y socialización, ofreciendo bebidas, tapas y ambiente distendido para el entretenimiento.",
+    keywords: ["bar", "pub", "copas", "cervecería", "bar de tapas"],
+    icon: Beer,
+    slug: "bares-pubs"
   },
   {
     title: "Pastelerías y Panaderías",
-    description: "Establecimientos especializados en panadería y repostería artesanal",
-    keywords: ["pastelería", "panadería", "repostería"],
+    description: "Establecimientos especializados en productos de panadería y repostería artesanal, ofreciendo una amplia variedad de panes y dulces.",
+    keywords: ["pastelería", "panadería", "repostería", "dulces", "pan artesanal"],
     icon: Cake,
     slug: "pastelerias"
   },
   {
+    title: "Hoteles Boutique",
+    description: "Alojamientos exclusivos y de diseño que ofrecen una experiencia única y personalizada a sus huéspedes.",
+    keywords: ["hotel boutique", "alojamiento exclusivo", "hotel diseño", "hotel lujo"],
+    icon: Building,
+    slug: "hoteles-boutique"
+  },
+  {
+    title: "Hostales y Pensiones",
+    description: "Alojamientos acogedores y económicos que ofrecen una alternativa práctica para estancias cortas y viajeros.",
+    keywords: ["hostal", "pensión", "alojamiento económico", "bed and breakfast"],
+    icon: Hotel,
+    slug: "hostales"
+  },
+  {
+    title: "Casas Rurales",
+    description: "Alojamientos en entornos rurales que permiten disfrutar de la naturaleza y la tranquilidad del campo.",
+    keywords: ["casa rural", "turismo rural", "alojamiento rural", "agroturismo"],
+    icon: Home,
+    slug: "casas-rurales"
+  },
+  {
     title: "Food Trucks",
-    description: "Cocina móvil y street food con propuestas innovadoras",
-    keywords: ["food truck", "comida callejera", "street food"],
+    description: "Cocina móvil que ofrece opciones gastronómicas innovadoras y de calidad en diferentes ubicaciones y eventos.",
+    keywords: ["food truck", "comida callejera", "street food", "eventos gastronómicos"],
     icon: Truck,
     slug: "food-trucks"
   },
   {
+    title: "Hamburgueserías",
+    description: "Establecimientos especializados en hamburguesas gourmet y creativas, utilizando ingredientes de calidad.",
+    keywords: ["hamburguesas", "burger", "hamburguesas gourmet", "fast casual"],
+    icon: Hamburger,
+    slug: "hamburgueserias"
+  },
+  {
+    title: "Pizzerías",
+    description: "Restaurantes especializados en pizzas artesanales, desde estilos tradicionales italianos hasta creaciones modernas.",
+    keywords: ["pizzería", "pizza artesanal", "cocina italiana", "pizza gourmet"],
+    icon: Pizza,
+    slug: "pizzerias"
+  },
+  {
     title: "Catering y Eventos",
-    description: "Servicios profesionales para eventos y celebraciones",
-    keywords: ["catering", "eventos", "celebraciones"],
+    description: "Servicios profesionales de alimentación para eventos y celebraciones, adaptados a las necesidades del cliente.",
+    keywords: ["catering", "eventos", "banquetes", "celebraciones", "servicio food"],
     icon: PartyPopper,
     slug: "catering"
   },
   {
     title: "Heladerías Artesanales",
-    description: "Helados y postres helados elaborados artesanalmente",
-    keywords: ["heladería", "helados artesanales", "postres"],
+    description: "Establecimientos especializados en helados y postres helados elaborados de forma artesanal con ingredientes naturales.",
+    keywords: ["heladería", "helados artesanales", "postres helados", "gelato"],
     icon: IceCream,
     slug: "heladerias"
-  },
-  {
-    title: "Restaurantes de cocina internacional",
-    description: "Establecimientos que ofrecen una variada selección de platos de diferentes culturas, incluyendo cocina italiana, francesa, japonesa y otras gastronomías internacionales.",
-    keywords: ["cocina internacional", "gastronomía mundial", "fusion", "cocina italiana", "cocina francesa", "cocina japonesa"],
-    icon: Globe,
-    slug: "cocina-internacional"
-  },
-  {
-    title: "Restaurantes de cocina latinoamericana",
-    description: "Espacios gastronómicos especializados en la rica y diversa cocina de América Latina, desde la cocina peruana hasta los asados argentinos.",
-    keywords: ["cocina latina", "comida peruana", "cocina mexicana", "asados argentinos", "arepas venezolanas", "cocina colombiana"],
-    icon: ChefIcon,
-    slug: "cocina-latinoamericana"
-  },
-  {
-    title: "Gastrobares",
-    description: "Establecimientos que combinan la alta cocina con un ambiente más informal y desenfadado, ofreciendo tapas gourmet y platos creativos.",
-    keywords: ["gastrobar", "tapas gourmet", "cocina creativa", "bar gastronómico", "cocina informal"],
-    icon: Wine,
-    slug: "gastrobares"
-  },
-  {
-    title: "Restaurantes de mariscos y pescados",
-    description: "Especialistas en productos frescos del mar, ofreciendo una amplia variedad de pescados y mariscos preparados de forma tradicional e innovadora.",
-    keywords: ["marisquería", "pescados frescos", "marisco", "cocina marinera", "productos del mar"],
-    icon: Shell,
-    slug: "mariscos-pescados"
-  },
-  {
-    title: "Asadores y parrillas",
-    description: "Restaurantes especializados en carnes a la brasa y parrilla, ofreciendo cortes selectos y preparaciones tradicionales.",
-    keywords: ["asador", "parrilla", "carnes a la brasa", "barbacoa", "carne a la parrilla"],
-    icon: Drumstick,
-    slug: "asadores-parrillas"
-  },
-  {
-    title: "Restaurantes buffet",
-    description: "Establecimientos que ofrecen una amplia variedad de platos en formato buffet, permitiendo a los clientes elegir entre múltiples opciones.",
-    keywords: ["buffet", "autoservicio", "variedad gastronómica", "buffet libre", "all you can eat"],
-    icon: BuffetIcon,
-    slug: "buffet"
-  },
-  {
-    title: "Restaurantes temáticos",
-    description: "Locales con ambientación y decoración específica, que ofrecen una experiencia gastronómica única basada en un tema o concepto particular.",
-    keywords: ["restaurante temático", "experiencia gastronómica", "ambientación especial", "decoración temática"],
-    icon: Palette,
-    slug: "tematicos"
-  },
-  {
-    title: "Restaurantes de cocina rápida o fast food",
-    description: "Establecimientos que ofrecen servicio rápido y eficiente, con opciones de comida preparada al momento incluyendo alternativas saludables.",
-    keywords: ["fast food", "comida rápida", "servicio rápido", "take away", "para llevar"],
-    icon: Timer,
-    slug: "fast-food"
-  },
-  {
-    title: "Restaurantes de brunch",
-    description: "Especializados en el servicio de brunch, combinando desayuno y almuerzo con opciones variadas y creativas, especialmente populares los fines de semana.",
-    keywords: ["brunch", "desayuno tardío", "almuerzo temprano", "café especialidad", "huevos benedict"],
-    icon: BrunchIcon,
-    slug: "brunch"
-  },
-  {
-    title: "Restaurantes de cocina asiática",
-    description: "Establecimientos especializados en las diversas gastronomías asiáticas, incluyendo cocina china, tailandesa, vietnamita y otras variedades orientales.",
-    keywords: ["cocina asiática", "comida china", "cocina tailandesa", "cocina vietnamita", "sushi"],
-    icon: Globe2,
-    slug: "cocina-asiatica"
-  },
-  {
-    title: "Restaurantes ecológicos y km 0",
-    description: "Restaurantes comprometidos con la sostenibilidad, utilizando productos locales, orgánicos y de temporada en sus elaboraciones.",
-    keywords: ["ecológico", "kilómetro cero", "productos locales", "orgánico", "sostenible"],
-    icon: Sprout,
-    slug: "ecologicos-km0"
   }
 ];
 
@@ -233,7 +195,7 @@ const HospitalityRestaurants = () => {
     "provider": {
       "@type": "Organization",
       "name": "localSEOads",
-      "url": "https://localSEOads.com"
+      "url": "https://localSEOAds.com"
     }
   };
 
