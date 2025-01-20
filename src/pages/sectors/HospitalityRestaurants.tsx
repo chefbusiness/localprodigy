@@ -96,7 +96,7 @@ const HospitalityRestaurants = () => {
               width="1920"
               height="1080"
               loading="eager"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4">
