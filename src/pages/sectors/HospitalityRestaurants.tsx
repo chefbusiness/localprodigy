@@ -19,65 +19,76 @@ import {
   Globe,
   Truck,
   PartyPopper,
-  IceCream
+  IceCream,
+  Wheat,
+  Flame,
+  Sandwich,
+  Leaf
 } from "lucide-react";
 
 const services = [
   {
-    title: "Restaurantes Tradicionales",
-    description: "Cocina tradicional española con platos clásicos como paella, cocido y fabada",
-    keywords: ["restaurante tradicional", "cocina española", "gastronomía local"],
-    icon: ChefHat,
-    slug: "restaurantes-tradicionales"
+    title: "Restaurantes de cocina tradicional española",
+    description: "Establecimientos especializados en platos clásicos como paella, cocido madrileño y fabada asturiana, manteniendo viva la esencia de nuestra gastronomía.",
+    keywords: ["cocina tradicional", "gastronomía española", "platos típicos", "cocina regional"],
+    icon: UtensilsCrossed,
+    slug: "cocina-tradicional"
   },
   {
-    title: "Alta Cocina y Gourmet",
-    description: "Establecimientos con estrellas Michelin y experiencias gastronómicas únicas",
-    keywords: ["restaurante gourmet", "alta cocina", "estrella michelin"],
-    icon: UtensilsCrossed,
+    title: "Restaurantes de alta cocina o gourmet",
+    description: "Establecimientos de alta gastronomía y estrellas Michelin que ofrecen experiencias culinarias excepcionales y servicio de primera clase.",
+    keywords: ["alta cocina", "restaurante gourmet", "estrella michelin", "gastronomía premium"],
+    icon: ChefHat,
     slug: "alta-cocina"
   },
   {
-    title: "Cocina de Autor",
-    description: "Chefs creativos que fusionan técnicas e ingredientes de forma innovadora",
-    keywords: ["cocina de autor", "fusión", "innovación culinaria"],
+    title: "Restaurantes de cocina de autor",
+    description: "Espacios creativos donde chefs innovadores fusionan técnicas tradicionales con conceptos modernos para crear experiencias únicas.",
+    keywords: ["cocina de autor", "gastronomía creativa", "cocina moderna", "chef creativo"],
     icon: Soup,
     slug: "cocina-autor"
   },
   {
-    title: "Bares de Tapas",
-    description: "Especializados en una amplia variedad de pequeños platos para compartir",
-    keywords: ["bar de tapas", "tapas", "pinchos"],
+    title: "Restaurantes de tapas",
+    description: "Locales especializados en la auténtica tradición española de tapas, ofreciendo una amplia variedad de pequeños platos para compartir.",
+    keywords: ["tapas", "pinchos", "raciones", "bar de tapas"],
     icon: GlassWater,
-    slug: "bares-tapas"
+    slug: "tapas"
   },
   {
-    title: "Cocina Mediterránea",
-    description: "Centrados en ingredientes frescos y saludables típicos de la dieta mediterránea",
-    keywords: ["cocina mediterránea", "saludable", "productos frescos"],
+    title: "Restaurantes de cocina mediterránea",
+    description: "Establecimientos centrados en la saludable dieta mediterránea, con productos frescos, aceite de oliva y sabores tradicionales.",
+    keywords: ["cocina mediterránea", "dieta mediterránea", "productos frescos", "cocina saludable"],
     icon: Salad,
-    slug: "cocina-mediterranea"
+    slug: "mediterranea"
   },
   {
-    title: "Marisquerías y Pescaderías",
-    description: "Especializados en productos del mar, muy populares en zonas costeras",
-    keywords: ["marisquería", "pescados", "marisco fresco"],
-    icon: Fish,
-    slug: "marisquerias"
+    title: "Restaurantes de cocina vasca",
+    description: "Especialistas en la renombrada gastronomía vasca, famosa por sus pinchos, pescados frescos y carnes a la parrilla.",
+    keywords: ["cocina vasca", "pintxos", "asador vasco", "gastronomía del norte"],
+    icon: Flame,
+    slug: "cocina-vasca"
   },
   {
-    title: "Asadores y Parrillas",
-    description: "Centrados en carnes a la brasa y platos tradicionales",
-    keywords: ["asador", "parrilla", "carnes"],
-    icon: Beef,
-    slug: "asadores"
+    title: "Restaurantes de cocina catalana",
+    description: "Exponentes de la rica tradición culinaria catalana, desde el pan con tomate hasta las creaciones más vanguardistas.",
+    keywords: ["cocina catalana", "gastronomía catalana", "pa amb tomàquet", "cocina moderna"],
+    icon: Wheat,
+    slug: "cocina-catalana"
   },
   {
-    title: "Cocina Internacional",
-    description: "Restaurantes de cocina italiana, francesa, japonesa y otras culturas",
-    keywords: ["cocina internacional", "fusión", "gastronomía mundial"],
+    title: "Restaurantes de cocina fusión",
+    description: "Espacios innovadores que combinan diferentes culturas culinarias, creando platos únicos que mezclan sabores internacionales.",
+    keywords: ["cocina fusión", "gastronomía internacional", "cocina creativa", "sabores del mundo"],
     icon: Globe,
-    slug: "cocina-internacional"
+    slug: "fusion"
+  },
+  {
+    title: "Restaurantes vegetarianos y veganos",
+    description: "Establecimientos especializados en cocina basada en plantas, ofreciendo alternativas saludables y sostenibles sin productos de origen animal.",
+    keywords: ["vegetariano", "vegano", "plant-based", "comida saludable"],
+    icon: Leaf,
+    slug: "vegetariano-vegano"
   },
   {
     title: "Cafeterías y Coffee Shops",
