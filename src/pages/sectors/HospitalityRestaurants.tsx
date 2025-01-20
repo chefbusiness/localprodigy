@@ -1,36 +1,36 @@
-import { UtensilsCrossed, Coffee, ChefHat, Hotel, Truck, Cake } from "lucide-react";
+import { ChefHat, UtensilsCrossed, Coffee, Hotel, Truck, Cake } from "lucide-react";
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
 
 const HospitalityRestaurants = () => {
   const services = [
     {
-      title: "SEO Local para Restaurantes",
-      description: "Mejora la visibilidad de tu restaurante en búsquedas locales y Google Maps",
+      title: "Restaurantes Tradicionales",
+      description: "Marketing digital para restaurantes de cocina tradicional española y moderna",
       icon: ChefHat
     },
     {
-      title: "SEO para Cafeterías",
-      description: "Estrategias digitales para cafeterías y coffee shops",
+      title: "Cafeterías y Coffee Shops",
+      description: "Estrategias digitales para cafeterías y establecimientos de café especializado",
       icon: Coffee
     },
     {
-      title: "Marketing para Hoteles",
-      description: "Soluciones digitales para hoteles y alojamientos turísticos",
+      title: "Hoteles y Alojamientos",
+      description: "Soluciones digitales para hoteles boutique y alojamientos turísticos",
       icon: Hotel
     },
     {
-      title: "SEO para Food Trucks",
-      description: "Marketing digital para food trucks y cocina móvil",
+      title: "Food Trucks y Catering",
+      description: "Marketing digital para food trucks y servicios de catering",
       icon: Truck
     },
     {
-      title: "Marketing para Pastelerías",
-      description: "Estrategias digitales para pastelerías y panaderías",
+      title: "Pastelerías y Panaderías",
+      description: "Estrategias digitales para pastelerías y panaderías artesanales",
       icon: Cake
     },
     {
-      title: "SEO para Bares y Pubs",
-      description: "Posicionamiento local para bares y pubs",
+      title: "Bares y Restaurantes Temáticos",
+      description: "Posicionamiento local para bares y restaurantes especializados",
       icon: UtensilsCrossed
     }
   ];
@@ -42,13 +42,13 @@ const HospitalityRestaurants = () => {
       icon: ChefHat
     },
     {
-      title: "Gestión de Reputación",
-      description: "Mejora y gestiona tu reputación online a través de reseñas y valoraciones",
+      title: "Gestión de Reputación Online",
+      description: "Mejora y gestiona tu reputación a través de reseñas y valoraciones",
       icon: Coffee
     },
     {
-      title: "Reservas Online",
-      description: "Implementa y optimiza sistemas de reservas online para aumentar las conversiones",
+      title: "Reservas y Pedidos Online",
+      description: "Implementa y optimiza sistemas de reservas y pedidos online",
       icon: Hotel
     },
     {
@@ -65,7 +65,7 @@ const HospitalityRestaurants = () => {
     },
     {
       question: "¿Qué importancia tienen las reseñas para mi negocio hostelero?",
-      answer: "Las reseñas son fundamentales para la hostelería ya que influyen directamente en la decisión de compra, mejoran tu posicionamiento local y aumentan la confianza de los clientes potenciales."
+      answer: "Las reseñas son fundamentales para la hostelería ya que influyen directamente en la decisión de los clientes, mejoran tu posicionamiento local y aumentan la confianza de los clientes potenciales."
     },
     {
       question: "¿Cómo puedo destacar frente a la competencia en mi zona?",
