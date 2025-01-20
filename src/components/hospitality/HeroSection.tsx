@@ -20,7 +20,7 @@ export const HeroSection = ({ title, description }: HeroSectionProps) => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            {title}
+            SEO Local para Negocios de Hostelería y Restauración
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {description}
