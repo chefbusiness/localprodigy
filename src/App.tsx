@@ -1,3 +1,7 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "@/pages/Index";
 import Contact from "@/pages/Contact";
@@ -14,24 +18,32 @@ import ConsultancyServices from "@/pages/sectors/professional-services/Consultan
 
 import "./App.css";
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/contacto" element={<Contact />} />
-        <Route path="/servicios" element={<Services />} />
-        <Route path="/sectores" element={<Sectors />} />
-        <Route path="/servicios/seo-local" element={<LocalSEO />} />
-        <Route path="/servicios/seo-nacional" element={<NationalSEO />} />
-        <Route path="/servicios/desarrollo-web" element={<WebDevelopment />} />
-        <Route path="/servicios/publicidad-digital" element={<DigitalAds />} />
-        <Route path="/sectores/servicios-profesionales" element={<ProfessionalServices />} />
-        <Route path="/sectores/servicios-profesionales/clinicas-dentales" element={<DentalClinics />} />
-        <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
-        <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
-      </Routes>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/sectores" element={<Sectors />} />
+            <Route path="/servicios/seo-local" element={<LocalSEO />} />
+            <Route path="/servicios/seo-nacional" element={<NationalSEO />} />
+            <Route path="/servicios/desarrollo-web" element={<WebDevelopment />} />
+            <Route path="/servicios/publicidad-digital" element={<DigitalAds />} />
+            <Route path="/sectores/servicios-profesionales" element={<ProfessionalServices />} />
+            <Route path="/sectores/servicios-profesionales/clinicas-dentales" element={<DentalClinics />} />
+            <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
+            <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
+          </Routes>
+        </Router>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
 
