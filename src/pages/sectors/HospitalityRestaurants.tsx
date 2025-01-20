@@ -38,8 +38,7 @@ import {
   Sprout,
   Beer,
   Building,
-  Home,
-  Hamburger
+  Home
 } from "lucide-react";
 
 const services = [
@@ -159,7 +158,7 @@ const services = [
     title: "Hamburgueserías",
     description: "Establecimientos especializados en hamburguesas gourmet y creativas, utilizando ingredientes de calidad.",
     keywords: ["hamburguesas", "burger", "hamburguesas gourmet", "fast casual"],
-    icon: Hamburger,
+    icon: Beef,  // Cambiado de Hamburger a Beef
     slug: "hamburgueserias"
   },
   {
