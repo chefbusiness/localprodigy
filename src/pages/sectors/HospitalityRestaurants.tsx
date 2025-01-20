@@ -52,34 +52,59 @@ const services = [
 ];
 
 const HospitalityRestaurants = () => {
+  // Schema.org markup for better SEO
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Hostelería y Restauración | Servicios de Marketing Digital",
+    "description": "Soluciones de marketing digital especializadas para negocios y profesionales del sector hostelero y restauración en España",
+    "provider": {
+      "@type": "Organization",
+      "name": "localSEOads",
+      "url": "https://localSEOads.com"
+    }
+  };
+
   return (
     <>
       <Helmet>
-        <title>SEO Local para Hostelería y Restauración | localSEOads.com</title>
+        <title>Hostelería y Restauración | Servicios de Marketing Digital | localSEOads</title>
         <meta 
           name="description" 
-          content="Soluciones de marketing digital especializadas para negocios de hostelería y restauración. Mejora tu visibilidad online y atrae más clientes a tu establecimiento." 
+          content="Soluciones especializadas de marketing digital para restaurantes, hoteles, bares y negocios del sector hostelero. Mejora tu visibilidad online y atrae más clientes." 
         />
+        <meta 
+          name="keywords" 
+          content="marketing digital hostelería, SEO restaurantes, publicidad digital hoteles, marketing restaurantes españa, SEO local hostelería" 
+        />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+        <link rel="canonical" href="https://localseoads.com/sectores/hosteleria-restauracion" />
       </Helmet>
 
       <Header />
       
       <main className="min-h-screen bg-background">
         {/* Hero Section with Background Image */}
-        <section className="relative py-20 overflow-hidden bg-gradient-to-b from-muted to-background">
+        <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80"
-              alt="Hostelería y Restauración Hero"
+              alt="Interior de restaurante moderno representando el sector de hostelería y restauración"
               className="w-full h-full object-cover opacity-10"
+              width="1920"
+              height="1080"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
           <div className="container relative z-10 mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Hostelería y Restauración
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Soluciones de marketing digital especializadas para negocios y profesionales del sector hostelero y restauración
               </p>
             </div>
