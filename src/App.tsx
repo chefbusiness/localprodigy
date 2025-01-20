@@ -13,7 +13,6 @@ import WebDevelopment from "@/pages/services/WebDevelopment";
 import DigitalAds from "@/pages/services/DigitalAds";
 import ProfessionalServices from "@/pages/sectors/ProfessionalServices";
 import HealthWellness from "@/pages/sectors/HealthWellness";
-import HospitalityAndRestaurants from "@/pages/sectors/HospitalityAndRestaurants";
 import DentalClinics from "@/pages/sectors/professional-services/DentalClinics";
 import LegalServices from "@/pages/sectors/professional-services/LegalServices";
 import ConsultancyServices from "@/pages/sectors/professional-services/ConsultancyServices";
@@ -40,7 +39,6 @@ function App() {
             <Route path="/servicios/publicidad-digital" element={<DigitalAds />} />
             <Route path="/sectores/servicios-profesionales" element={<ProfessionalServices />} />
             <Route path="/sectores/salud-bienestar" element={<HealthWellness />} />
-            <Route path="/sectores/hosteleria-restauracion" element={<HospitalityAndRestaurants />} />
             <Route path="/sectores/servicios-profesionales/clinicas-dentales" element={<DentalClinics />} />
             <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
             <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
