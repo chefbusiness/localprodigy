@@ -53,9 +53,13 @@ const DentalClinics = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Soluciones adaptadas a las necesidades de tu clínica dental
               </p>
-              <Button asChild variant="outline" className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors">
+              <Button 
+                asChild 
+                variant="outline" 
+                className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors w-full sm:w-auto"
+              >
                 <Link to="/servicios/seo-local">
-                  Ver todos los detalles de nuestros servicios SEO Local →
+                  Más información sobre SEO Local →
                 </Link>
               </Button>
             </div>
@@ -71,9 +75,13 @@ const DentalClinics = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Campañas de Google Ads optimizadas para el sector dental
               </p>
-              <Button asChild variant="outline" className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors">
+              <Button 
+                asChild 
+                variant="outline" 
+                className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors w-full sm:w-auto"
+              >
                 <Link to="/servicios/publicidad-digital">
-                  Descubre todas nuestras soluciones de publicidad digital →
+                  Explorar servicios de publicidad →
                 </Link>
               </Button>
             </div>
