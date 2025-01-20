@@ -22,16 +22,30 @@ export const LegalSchema = () => {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "SEO Local para Abogados",
-            "description": "Posicionamiento en búsquedas locales para captar clientes en su área"
+            "name": "Plan Local Starter",
+            "description": "Plan básico de SEO local para despachos de abogados",
+            "price": "297",
+            "priceCurrency": "EUR"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Marketing de Contenidos Legal",
-            "description": "Contenido especializado que demuestra su experiencia"
+            "name": "Plan Local Growth",
+            "description": "Plan profesional de SEO local para despachos de abogados",
+            "price": "597",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Plan Local Authority",
+            "description": "Plan premium de SEO local para despachos de abogados",
+            "price": "997",
+            "priceCurrency": "EUR"
           }
         }
       ]
