@@ -17,11 +17,10 @@ import HospitalityRestaurants from "@/pages/sectors/HospitalityRestaurants";
 import DentalClinics from "@/pages/sectors/professional-services/DentalClinics";
 import LegalServices from "@/pages/sectors/professional-services/LegalServices";
 import ConsultancyServices from "@/pages/sectors/professional-services/ConsultancyServices";
+import PsychologyServices from "@/pages/sectors/professional-services/PsychologyServices";
 import LocalRetail from "@/pages/sectors/LocalRetail";
 import HomeServices from "@/pages/sectors/HomeServices";
 import Automotive from "@/pages/sectors/Automotive";
-
-import "./App.css";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +49,7 @@ function App() {
             <Route path="/sectores/servicios-profesionales/clinicas-dentales" element={<DentalClinics />} />
             <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
             <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
+            <Route path="/sectores/servicios-profesionales/psicologos" element={<PsychologyServices />} />
           </Routes>
         </Router>
       </TooltipProvider>
