@@ -212,9 +212,16 @@ export function ContactForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="297">297€ - Plan Básico</SelectItem>
-                    <SelectItem value="597">597€ - Plan Profesional</SelectItem>
-                    <SelectItem value="997">997€ - Plan Premium</SelectItem>
+                    <SelectItem value="297">297€ - Plan SEO Local Básico</SelectItem>
+                    <SelectItem value="597">597€ - Plan SEO Local Profesional</SelectItem>
+                    <SelectItem value="997">997€ - Plan SEO Local Premium</SelectItem>
+                    <SelectItem value="497-ads">497€ - Google Ads Essential</SelectItem>
+                    <SelectItem value="797-ads">797€ - Google Ads Professional</SelectItem>
+                    <SelectItem value="497-meta">497€ - Meta Ads Essential</SelectItem>
+                    <SelectItem value="797-meta">797€ - Meta Ads Professional</SelectItem>
+                    <SelectItem value="1497-pack">1.497€ - Pack Growth Digital</SelectItem>
+                    <SelectItem value="2497-pack">2.497€ - Pack Business Total</SelectItem>
+                    <SelectItem value="4997-pack">4.997€ - Pack Enterprise</SelectItem>
                     <SelectItem value="custom">Presupuesto Personalizado</SelectItem>
                   </SelectContent>
                 </Select>
