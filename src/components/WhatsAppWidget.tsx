@@ -6,7 +6,7 @@ export const WhatsAppWidget = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -16,7 +16,7 @@ export const WhatsAppWidget = () => {
               rel="noopener noreferrer"
               className="group block relative transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 rounded-full"
             >
-              <Avatar className="w-24 h-24 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Avatar className="w-16 h-16 md:w-24 md:h-24 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <AvatarImage
                   src="/lovable-uploads/617d0370-5a2e-4347-a5d7-a3e0ad7837e9.png"
                   alt="Foto de perfil del consultor SEO"
@@ -24,9 +24,9 @@ export const WhatsAppWidget = () => {
                 />
               </Avatar>
               {/* WhatsApp Icon Badge */}
-              <div className="absolute -bottom-1 -right-1 bg-[#25D366] rounded-full p-1.5 border-2 border-white shadow-lg group-hover:scale-110 transition-transform">
+              <div className="absolute -bottom-1 -right-1 bg-[#25D366] rounded-full p-1 md:p-1.5 border-2 border-white shadow-lg group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
