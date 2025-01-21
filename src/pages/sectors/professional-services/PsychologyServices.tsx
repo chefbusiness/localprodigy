@@ -1,5 +1,6 @@
 import { Brain, Heart, Globe } from "lucide-react";
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
+import { PricingPlans } from "@/components/local-seo/PricingPlans";
 
 const services = [
   {
@@ -74,7 +75,19 @@ const PsychologyServicesPage = () => {
         buttonText: "Solicitar Consulta Gratuita",
         buttonLink: "/contacto"
       }}
-    />
+    >
+      <section className="py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Planes de SEO Local para Psicólogos</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Soluciones adaptadas a las necesidades de su consulta psicológica
+            </p>
+          </div>
+          <PricingPlans />
+        </div>
+      </section>
+    </BusinessLandingPage>
   );
 };
 
