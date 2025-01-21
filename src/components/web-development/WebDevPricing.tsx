@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { PricingCard } from "./pricing/PricingCard";
+import { PricingCTA } from "./pricing/PricingCTA";
 
 const plans = [
   {
@@ -61,62 +59,11 @@ export const WebDevPricing = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan) => (
-            <Card 
-              key={plan.name}
-              className={`relative hover:shadow-lg transition-all duration-300 animate-fade-up ${
-                plan.popular ? "border-2 border-yellow" : ""
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-yellow text-yellow-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    Más Popular
-                  </span>
-                </div>
-              )}
-              <CardHeader>
-                <CardTitle className="text-2xl mb-4">{plan.name}</CardTitle>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold">{plan.price}€</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-yellow shrink-0 mt-1" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  asChild
-                  className={`w-full mt-6 text-lg ${
-                    plan.popular 
-                      ? "bg-yellow hover:bg-yellow-dark text-yellow-foreground" 
-                      : "hover:bg-primary/90"
-                  }`}
-                >
-                  <Link to="/contacto">Solicitar Plan</Link>
-                </Button>
-              </CardContent>
-            </Card>
+            <PricingCard key={plan.name} plan={plan} />
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
-            ¿Necesitas funcionalidades específicas? ¿Tienes un proyecto especial?
-          </p>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            asChild 
-            className="text-lg hover:bg-white/10"
-          >
-            <Link to="/contacto">Contacta con Nosotros</Link>
-          </Button>
-        </div>
+        <PricingCTA />
       </div>
     </section>
   );
