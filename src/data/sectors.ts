@@ -1,4 +1,4 @@
-import { Building2, HeartPulse, UtensilsCrossed, Store, Wrench, Car } from "lucide-react";
+import { Building2, HeartPulse, UtensilsCrossed, Store, Wrench, Car, Plus } from "lucide-react";
 
 export const sectors = [
   {
@@ -107,6 +107,19 @@ export const sectors = [
       "Empresas de alquiler de vehículos",
       "ITV",
       "Servicios de grúa"
+    ]
+  },
+  {
+    title: "Otros Sectores",
+    icon: Plus,
+    description: "Otros tipos de negocios no listados anteriormente",
+    slug: "otros-sectores",
+    businesses: [
+      "Otros tipos de negocios",
+      "Sectores emergentes",
+      "Nuevas industrias",
+      "Negocios especializados",
+      "Servicios únicos"
     ]
   }
 ];
