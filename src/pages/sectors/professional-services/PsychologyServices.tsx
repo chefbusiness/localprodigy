@@ -1,6 +1,8 @@
 import { Brain, Heart, Globe, Users } from "lucide-react";
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
 import { PricingPlans } from "@/components/local-seo/PricingPlans";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -116,6 +118,36 @@ const PsychologyServicesPage = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Soluciones adaptadas a las necesidades de su consulta psicológica
             </p>
+            <Button 
+              asChild 
+              variant="outline" 
+              className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors w-full sm:w-auto"
+            >
+              <Link to="/servicios/seo-local">
+                Más información sobre SEO Local →
+              </Link>
+            </Button>
+          </div>
+          <PricingPlans />
+        </div>
+      </section>
+
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Publicidad Digital para Psicólogos</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Campañas de Google Ads optimizadas para consultas psicológicas
+            </p>
+            <Button 
+              asChild 
+              variant="outline" 
+              className="mb-12 hover:bg-yellow hover:text-yellow-foreground transition-colors w-full sm:w-auto"
+            >
+              <Link to="/servicios/publicidad-digital">
+                Explorar servicios de publicidad →
+              </Link>
+            </Button>
           </div>
           <PricingPlans />
         </div>
