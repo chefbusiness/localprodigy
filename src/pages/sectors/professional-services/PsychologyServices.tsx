@@ -13,8 +13,8 @@ const PsychologyServicesPage = () => {
     <>
       <PsychologySchema />
       <Header />
+      <PsychologyBreadcrumbs />
       <main className="min-h-screen bg-background">
-        <PsychologyBreadcrumbs />
         <PsychologyHero />
         <PsychologyServices />
         <PsychologyPricingSection />

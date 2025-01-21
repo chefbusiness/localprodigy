@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 export const PsychologyBreadcrumbs = () => {
   const breadcrumbSchema = {
@@ -53,14 +54,14 @@ export const PsychologyBreadcrumbs = () => {
           >
             <Link 
               to="/" 
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-primary transition-colors"
               itemProp="item"
             >
               <span itemProp="name">Inicio</span>
             </Link>
             <meta itemProp="position" content="1" />
           </li>
-          <span>/</span>
+          <ChevronRight className="h-4 w-4 text-muted-foreground" />
           <li 
             itemProp="itemListElement" 
             itemScope 
@@ -68,14 +69,14 @@ export const PsychologyBreadcrumbs = () => {
           >
             <Link 
               to="/sectores" 
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-primary transition-colors"
               itemProp="item"
             >
               <span itemProp="name">Sectores</span>
             </Link>
             <meta itemProp="position" content="2" />
           </li>
-          <span>/</span>
+          <ChevronRight className="h-4 w-4 text-muted-foreground" />
           <li 
             itemProp="itemListElement" 
             itemScope 
@@ -83,19 +84,19 @@ export const PsychologyBreadcrumbs = () => {
           >
             <Link 
               to="/sectores/servicios-profesionales" 
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-primary transition-colors"
               itemProp="item"
             >
               <span itemProp="name">Servicios Profesionales</span>
             </Link>
             <meta itemProp="position" content="3" />
           </li>
-          <span>/</span>
+          <ChevronRight className="h-4 w-4 text-muted-foreground" />
           <li 
             itemProp="itemListElement" 
             itemScope 
             itemType="https://schema.org/ListItem"
-            className="text-primary"
+            className="text-primary font-medium"
           >
             <span itemProp="name">Psicólogos</span>
             <meta itemProp="position" content="4" />
