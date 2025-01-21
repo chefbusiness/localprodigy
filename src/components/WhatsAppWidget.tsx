@@ -16,7 +16,7 @@ export const WhatsAppWidget = () => {
               rel="noopener noreferrer"
               className="group block relative transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 rounded-full"
             >
-              <Avatar className="w-20 h-20 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Avatar className="w-24 h-24 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <AvatarImage
                   src="/lovable-uploads/617d0370-5a2e-4347-a5d7-a3e0ad7837e9.png"
                   alt="Foto de perfil del consultor SEO"
