@@ -17,6 +17,7 @@ import HospitalityRestaurants from "@/pages/sectors/HospitalityRestaurants";
 import DentalClinics from "@/pages/sectors/professional-services/DentalClinics";
 import LegalServices from "@/pages/sectors/professional-services/LegalServices";
 import ConsultancyServices from "@/pages/sectors/professional-services/ConsultancyServices";
+import LocalRetail from "@/pages/sectors/LocalRetail";
 
 import "./App.css";
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/sectores/servicios-profesionales" element={<ProfessionalServices />} />
             <Route path="/sectores/salud-bienestar" element={<HealthWellness />} />
             <Route path="/sectores/hosteleria-restauracion" element={<HospitalityRestaurants />} />
+            <Route path="/sectores/comercio-local" element={<LocalRetail />} />
             <Route path="/sectores/servicios-profesionales/clinicas-dentales" element={<DentalClinics />} />
             <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
             <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
