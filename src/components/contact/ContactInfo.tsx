@@ -1,45 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
 
-export function ContactInfo() {
+const contactDetails = [
+  {
+    icon: MapPin,
+    title: "Dirección",
+    content: "Calle Gral Pardiñas 60, Madrid, España"
+  },
+  {
+    icon: Phone,
+    title: "Teléfono",
+    content: "+34 744 717 942"
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    content: "info@localseoads.com"
+  }
+];
+
+export const ContactInfo = () => {
   return (
-    <Card className="hover:shadow-lg transition-all duration-300">
-      <CardContent className="p-8">
-        <div className="space-y-8">
-          <div className="flex items-center space-x-6">
-            <div className="h-12 w-12 rounded-lg bg-yellow/10 flex items-center justify-center">
-              <Phone className="w-6 h-6 text-yellow" />
+    <div className="grid gap-4">
+      {contactDetails.map((detail, index) => (
+        <Card key={index} className="hover:shadow-lg transition-all duration-300">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <detail.icon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium text-lg">{detail.title}</h3>
+                <p className="text-muted-foreground">{detail.content}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-1">Teléfono</h3>
-              <p className="text-muted-foreground text-lg">+34 744 717 942</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-6">
-            <div className="h-12 w-12 rounded-lg bg-yellow/10 flex items-center justify-center">
-              <Mail className="w-6 h-6 text-yellow" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-1">Email</h3>
-              <p className="text-muted-foreground text-lg">info@localseoads.com</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-6">
-            <div className="h-12 w-12 rounded-lg bg-yellow/10 flex items-center justify-center">
-              <MapPin className="w-6 h-6 text-yellow" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-1">Dirección</h3>
-              <p className="text-muted-foreground text-lg">
-                Calle Gral Pardiñas 60<br />
-                28001 Madrid, España
-              </p>
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   );
-}
+};
