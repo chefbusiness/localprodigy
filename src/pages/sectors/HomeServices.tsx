@@ -40,7 +40,7 @@ const HomeServices = () => {
       
       <main className="min-h-screen bg-background">
         <HeroSection 
-          title="SEO Local para Servicios para el Hogar"
+          title="SEO Local para Proveedores de Servicios para el Hogar"
           description="Soluciones de marketing digital especializadas para empresas y profesionales de servicios para el hogar. Aumenta tu visibilidad online y atrae más clientes cualificados."
         />
 
