@@ -19,8 +19,8 @@ const PsychologyServicesPage = () => {
       </Helmet>
 
       <Header />
-      <PsychologyBreadcrumbs />
       <main>
+        <PsychologyBreadcrumbs />
         <PsychologyHero />
         <PsychologyServices />
         <PsychologyPricingSection />
