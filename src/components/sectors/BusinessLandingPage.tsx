@@ -37,7 +37,7 @@ interface BusinessLandingPageProps {
     answer: string;
   }[];
   callToAction: CallToAction;
-  children?: React.ReactNode;
+  children?: React.ReactNode; // Add this line
 }
 
 export const BusinessLandingPage = ({
@@ -49,7 +49,7 @@ export const BusinessLandingPage = ({
   benefits,
   faqSchema,
   callToAction,
-  children,
+  children, // Add this line
 }: BusinessLandingPageProps) => {
   // Schema.org markup
   const schemaData = {
@@ -99,7 +99,7 @@ export const BusinessLandingPage = ({
 
       <Header />
 
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background pt-20">
         {/* Breadcrumbs con Schema */}
         <nav className="container mx-auto px-4 py-4" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm" itemScope itemType="https://schema.org/BreadcrumbList">
@@ -143,7 +143,7 @@ export const BusinessLandingPage = ({
           <div className="container relative z-10 mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-up">
-                SEO Local y Marketing Digital para {title}
+                SEO Local y SEM Marketing Digital para {title}
               </h1>
               <p className="text-xl text-muted-foreground mb-8 animate-fade-up delay-100">
                 {description}
@@ -171,29 +171,80 @@ export const BusinessLandingPage = ({
           </div>
         </section>
 
-        {/* Contenido específico del sector */}
-        {children}
-
-        {/* Call to Action */}
+        {/* Servicios */}
         <section className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">{callToAction.title}</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                {callToAction.description}
-              </p>
-              <Button 
-                asChild 
-                size="lg"
-                className="bg-yellow hover:bg-yellow-light text-yellow-foreground"
-              >
-                <Link to={callToAction.buttonLink}>
-                  {callToAction.buttonText}
-                </Link>
-              </Button>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Nuestros Servicios para {title}
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => (
+                <div 
+                  key={service.title} 
+                  className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-2 bg-yellow/10 rounded-lg">
+                      <service.icon className="h-6 w-6 text-yellow" />
+                    </div>
+                    <h3 className="font-semibold">{service.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
+
+        {/* Beneficios */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Beneficios para tu {title}
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {benefits.map((benefit) => (
+                <div 
+                  key={benefit.title} 
+                  className="p-6 border rounded-lg hover:border-yellow transition-colors duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-2 bg-yellow/10 rounded-lg">
+                      <benefit.icon className="h-6 w-6 text-yellow" />
+                    </div>
+                    <h3 className="font-semibold">{benefit.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section si existe */}
+        {faqSchema && (
+          <section className="py-20 bg-muted/50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-12">
+                Preguntas Frecuentes sobre SEO para {title}
+              </h2>
+              <div className="max-w-3xl mx-auto space-y-6">
+                {faqSchema.map((faq) => (
+                  <div 
+                    key={faq.question} 
+                    className="bg-background p-6 rounded-lg hover:shadow-md transition-all duration-300"
+                  >
+                    <h3 className="font-semibold mb-3">{faq.question}</h3>
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Add children before Footer */}
+        {children}
       </main>
 
       <Footer />
