@@ -16,6 +16,9 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   businessName: z.string().min(2, {
@@ -43,6 +46,8 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,9 +60,36 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast.success("Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.");
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const templateParams = {
+        to_email: 'info@localseoads.com',
+        from_name: values.contactName,
+        from_email: values.email,
+        business_name: values.businessName,
+        phone: values.phone,
+        sector: values.sector,
+        location: values.location,
+        budget: values.budget,
+        message: values.message || 'No se incluyó mensaje adicional',
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Necesitarás configurar esto en EmailJS
+        'YOUR_TEMPLATE_ID', // Necesitarás crear una plantilla en EmailJS
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Tu clave pública de EmailJS
+      );
+
+      toast.success("Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.");
+      form.reset();
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      toast.error("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -209,8 +241,19 @@ export function ContactForm() {
             )}
           />
 
-          <Button type="submit" className="w-full">
-            Solicitar Consulta Gratuita
+          <Button 
+            type="submit" 
+            className="w-full"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Enviando...
+              </>
+            ) : (
+              'Solicitar Consulta Gratuita'
+            )}
           </Button>
         </form>
       </Form>
