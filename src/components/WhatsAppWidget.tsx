@@ -16,7 +16,7 @@ export const WhatsAppWidget = () => {
               rel="noopener noreferrer"
               className="group block relative transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 rounded-full"
             >
-              <Avatar className="w-16 h-16 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Avatar className="w-20 h-20 border-2 border-white shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <AvatarImage
                   src="/lovable-uploads/617d0370-5a2e-4347-a5d7-a3e0ad7837e9.png"
                   alt="Foto de perfil del consultor SEO"
@@ -24,9 +24,9 @@ export const WhatsAppWidget = () => {
                 />
               </Avatar>
               {/* WhatsApp Icon Badge */}
-              <div className="absolute -bottom-1 -right-1 bg-[#25D366] rounded-full p-2 border-2 border-white shadow-lg group-hover:scale-110 transition-transform">
+              <div className="absolute -bottom-1 -right-1 bg-[#25D366] rounded-full p-1.5 border-2 border-white shadow-lg group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-5 h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
