@@ -6,10 +6,12 @@ import { ServiceGrid } from "@/components/retail/ServiceGrid";
 import { homeServices } from "@/data/home-services";
 
 const HomeServices = () => {
+  const pageTitle = "SEO Local para Proveedores de Servicios para el Hogar";
+  
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "SEO Local para Servicios para el Hogar | Marketing Digital",
+    "name": pageTitle,
     "description": "Soluciones de marketing digital especializadas para empresas y profesionales de servicios para el hogar. Mejora tu visibilidad online y atrae más clientes cualificados.",
     "provider": {
       "@type": "Organization",
@@ -21,7 +23,7 @@ const HomeServices = () => {
   return (
     <>
       <Helmet>
-        <title>SEO Local para Servicios para el Hogar | Marketing Digital | localSEOads</title>
+        <title>{pageTitle} | Marketing Digital | localSEOads</title>
         <meta 
           name="description" 
           content="Soluciones especializadas de marketing digital para empresas y profesionales de servicios para el hogar. Mejora tu visibilidad online y atrae más clientes cualificados." 
@@ -40,7 +42,7 @@ const HomeServices = () => {
       
       <main className="min-h-screen bg-background">
         <HeroSection 
-          title="SEO Local para Proveedores de Servicios para el Hogar"
+          title={pageTitle}
           description="Soluciones de marketing digital especializadas para empresas y profesionales de servicios para el hogar. Aumenta tu visibilidad online y atrae más clientes cualificados."
         />
 
