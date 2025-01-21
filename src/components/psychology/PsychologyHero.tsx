@@ -36,7 +36,7 @@ export const PsychologyHero = () => {
               variant="outline" 
               className="text-lg animate-fade-up hover:bg-white/10"
             >
-              <a href="#servicios">Ver Servicios</a>
+              <Link to="/servicios">Ver Servicios</Link>
             </Button>
           </div>
         </div>

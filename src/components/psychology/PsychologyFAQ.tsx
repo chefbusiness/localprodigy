@@ -17,6 +17,10 @@ const faqs = [
   {
     question: "¿Cuánto tiempo lleva ver resultados en SEO para psicólogos?",
     answer: "El SEO es una estrategia a medio-largo plazo. Aunque algunos resultados pueden verse en 3-4 meses, los resultados más significativos suelen aparecer entre 6-12 meses. Factores como la competencia en su área y especialidad pueden influir en estos plazos."
+  },
+  {
+    question: "¿Qué presupuesto debo considerar para marketing digital?",
+    answer: "El presupuesto varía según sus objetivos y el alcance deseado. Nuestros planes comienzan desde 597€/mes para gestión básica de presencia online. Para una estrategia completa que incluya SEO, PPC y gestión de contenidos, recomendamos un presupuesto mensual desde 997€."
   }
 ];
 
