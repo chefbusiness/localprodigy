@@ -9,10 +9,13 @@ import { PsychologyBreadcrumbs } from "@/components/psychology/PsychologyBreadcr
 
 const PsychologyServicesPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <Helmet>
-        <title>Servicios SEO para Psicólogos | localprodigy</title>
-        <meta name="description" content="Servicios de SEO y marketing digital especializados para psicólogos y profesionales de la salud mental. Mejora tu visibilidad online y atrae más pacientes." />
+        <title>SEO Local para Psicólogos | Marketing Digital para Psicólogos | localSEOads</title>
+        <meta 
+          name="description" 
+          content="Servicios especializados de SEO Local y Marketing Digital para psicólogos y terapeutas. Aumenta tu visibilidad online y consigue más pacientes cualificados." 
+        />
       </Helmet>
 
       <Header />
@@ -24,7 +27,7 @@ const PsychologyServicesPage = () => {
         <PsychologyFAQ />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
