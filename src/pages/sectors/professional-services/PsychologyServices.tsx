@@ -7,6 +7,7 @@ import { PsychologyPricingSection } from "@/components/psychology/PsychologyPric
 import { PsychologySchema } from "@/components/psychology/PsychologySchema";
 import { PsychologyBreadcrumbs } from "@/components/psychology/PsychologyBreadcrumbs";
 import { PsychologyAdsSection } from "@/components/psychology/PsychologyAdsSection";
+import { WhatsAppWidget } from "@/components/WhatsAppWidget";
 
 const PsychologyServicesPage = () => {
   return (
@@ -21,6 +22,7 @@ const PsychologyServicesPage = () => {
         <PsychologyAdsSection />
         <PsychologyFAQ />
       </main>
+      <WhatsAppWidget />
       <Footer />
     </>
   );
