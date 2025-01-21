@@ -1,10 +1,5 @@
-import { Helmet } from "react-helmet";
 import { Brain, Heart, Globe } from "lucide-react";
 import { BusinessLandingPage } from "@/components/sectors/BusinessLandingPage";
-import { PsychologyServices } from "@/components/psychology/PsychologyServices";
-import { PsychologyHero } from "@/components/psychology/PsychologyHero";
-import { PsychologyPricingSection } from "@/components/psychology/PsychologyPricingSection";
-import { PsychologyFAQ } from "@/components/psychology/PsychologyFAQ";
 
 const services = [
   {
@@ -79,12 +74,7 @@ const PsychologyServicesPage = () => {
         buttonText: "Solicitar Consulta Gratuita",
         buttonLink: "/contacto"
       }}
-    >
-      <PsychologyHero />
-      <PsychologyServices />
-      <PsychologyPricingSection />
-      <PsychologyFAQ />
-    </BusinessLandingPage>
+    />
   );
 };
 
