@@ -19,13 +19,11 @@ const PsychologyServicesPage = () => {
       </Helmet>
 
       <Header />
-      <main>
-        <PsychologyBreadcrumbs />
-        <PsychologyHero />
-        <PsychologyServices />
-        <PsychologyPricingSection />
-        <PsychologyFAQ />
-      </main>
+      <PsychologyBreadcrumbs />
+      <PsychologyHero />
+      <PsychologyServices />
+      <PsychologyPricingSection />
+      <PsychologyFAQ />
       <Footer />
     </>
   );
