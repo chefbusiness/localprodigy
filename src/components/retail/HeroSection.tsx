@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface HeroSectionProps {
   title: string;
   description: string;
@@ -8,21 +10,17 @@ export const HeroSection = ({ title, description }: HeroSectionProps) => {
     <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted to-background">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8"
-          alt="Interior de tienda moderna representando el sector de comercio local"
+          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+          alt="SEO por Sectores Hero"
           className="w-full h-full object-cover opacity-10"
-          width="1920"
-          height="1080"
-          loading="eager"
-          fetchPriority="high"
         />
       </div>
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            SEO Local para Comercio Local
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">
+            {title}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-12">
             {description}
           </p>
         </div>
