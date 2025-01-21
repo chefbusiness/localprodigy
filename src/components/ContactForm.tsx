@@ -20,8 +20,11 @@ export function ContactForm() {
       contactName: "",
       email: "",
       phone: "",
-      location: "",
+      sector: "",
+      city: "",
+      country: "",
       message: "",
+      budget: "",
     },
   });
 
@@ -35,7 +38,7 @@ export function ContactForm() {
         business_name: values.businessName,
         phone: values.phone,
         sector: values.sector,
-        location: values.location,
+        location: `${values.city}, ${values.country}`,
         budget: values.budget,
         message: values.message || 'No se incluyó mensaje adicional',
       };

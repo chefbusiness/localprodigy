@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { UseFormReturn } from "react-hook-form";
+import { sectors } from "@/data/sectors";
 import * as z from "zod";
 
 const formSchema = z.object({
@@ -21,8 +22,11 @@ const formSchema = z.object({
   sector: z.string({
     required_error: "Por favor, selecciona un sector.",
   }),
-  location: z.string().min(2, {
-    message: "Por favor, introduce tu ubicación.",
+  city: z.string().min(2, {
+    message: "Por favor, introduce tu ciudad.",
+  }),
+  country: z.string().min(2, {
+    message: "Por favor, introduce tu país.",
   }),
   message: z.string().optional(),
   budget: z.string({
@@ -97,7 +101,7 @@ export function ContactFormFields({ form }: ContactFormFieldsProps) {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         <FormField
           control={form.control}
           name="sector"
@@ -111,27 +115,41 @@ export function ContactFormFields({ form }: ContactFormFieldsProps) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="dental">Clínica Dental</SelectItem>
-                  <SelectItem value="legal">Servicios Legales</SelectItem>
-                  <SelectItem value="restaurant">Restaurante</SelectItem>
-                  <SelectItem value="automotive">Taller Mecánico</SelectItem>
-                  <SelectItem value="realestate">Inmobiliaria</SelectItem>
-                  <SelectItem value="health">Salud y Bienestar</SelectItem>
-                  <SelectItem value="other">Otro</SelectItem>
+                  {sectors.map((sector) => (
+                    <SelectItem key={sector.slug} value={sector.slug}>
+                      {sector.title}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
             </FormItem>
           )}
         />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
-          name="location"
+          name="city"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Ubicación</FormLabel>
+              <FormLabel>Ciudad</FormLabel>
               <FormControl>
-                <Input placeholder="Ciudad" {...field} />
+                <Input placeholder="Ej: Madrid" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="country"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>País</FormLabel>
+              <FormControl>
+                <Input placeholder="Ej: España" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
