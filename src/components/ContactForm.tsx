@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Form } from "@/components/ui/form";
 import { toast } from "sonner";
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { ContactFormHeader } from "./contact/ContactFormHeader";
 import { ContactFormFields, formSchema, type FormSchemaType } from "./contact/ContactFormFields";
@@ -31,31 +30,34 @@ export function ContactForm() {
   async function onSubmit(values: FormSchemaType) {
     setIsSubmitting(true);
     try {
-      const templateParams = {
-        to_email: 'info@localseoads.com',
-        from_name: values.contactName,
-        from_email: values.email,
-        business_name: values.businessName,
-        phone: values.phone,
-        sector: values.sector,
-        location: `${values.city}, ${values.country}`,
-        budget: values.budget,
-        message: values.message || 'No se incluyó mensaje adicional',
-      };
-
-      await emailjs.send(
-        process.env.VITE_EMAILJS_SERVICE_ID || '',
-        process.env.VITE_EMAILJS_TEMPLATE_ID || '',
-        templateParams,
-        process.env.VITE_EMAILJS_PUBLIC_KEY || ''
-      );
-
-      toast.success("¡Formulario enviado correctamente! Nos pondremos en contacto contigo pronto.", {
-        duration: 5000,
+      const response = await fetch("https://formspree.io/f/info@localseoads.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Negocio: values.businessName,
+          Contacto: values.contactName,
+          Email: values.email,
+          Teléfono: values.phone,
+          Sector: values.sector,
+          Ciudad: values.city,
+          País: values.country,
+          Presupuesto: values.budget,
+          Mensaje: values.message || "No se incluyó mensaje adicional",
+        }),
       });
-      form.reset();
+
+      if (response.ok) {
+        toast.success("¡Formulario enviado correctamente! Nos pondremos en contacto contigo pronto.", {
+          duration: 5000,
+        });
+        form.reset();
+      } else {
+        throw new Error("Error al enviar el formulario");
+      }
     } catch (error) {
-      console.error('Error al enviar el formulario:', error);
+      console.error("Error al enviar el formulario:", error);
       toast.error("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.", {
         duration: 7000,
       });
