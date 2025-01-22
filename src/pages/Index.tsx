@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-16">
+      <main className="pt-16">
         <Hero />
         <Services />
         <Testimonials />
@@ -29,7 +29,7 @@ const Index = () => {
             <Link to="/contacto">Contactar Ahora</Link>
           </Button>
         </section>
-      </div>
+      </main>
       <Footer />
     </div>
   );
