@@ -44,17 +44,21 @@ export function ContactForm() {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        process.env.VITE_EMAILJS_SERVICE_ID || '',
+        process.env.VITE_EMAILJS_TEMPLATE_ID || '',
         templateParams,
-        'YOUR_PUBLIC_KEY'
+        process.env.VITE_EMAILJS_PUBLIC_KEY || ''
       );
 
-      toast.success("Formulario enviado correctamente. Nos pondremos en contacto contigo pronto.");
+      toast.success("¡Formulario enviado correctamente! Nos pondremos en contacto contigo pronto.", {
+        duration: 5000,
+      });
       form.reset();
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
-      toast.error("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+      toast.error("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.", {
+        duration: 7000,
+      });
     } finally {
       setIsSubmitting(false);
     }
