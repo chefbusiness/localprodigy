@@ -30,7 +30,7 @@ export function ContactForm() {
   async function onSubmit(values: FormSchemaType) {
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formspree.io/f/info@localseoads.com", {
+      const response = await fetch("https://formspree.io/f/xbjnkzrw", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
