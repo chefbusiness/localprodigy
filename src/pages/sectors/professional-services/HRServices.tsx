@@ -3,13 +3,14 @@ import { Footer } from "@/components/Footer";
 import { HRBreadcrumbs } from "@/components/hr/HRBreadcrumbs";
 import { HRHero } from "@/components/hr/HRHero";
 import { HRSchema } from "@/components/hr/HRSchema";
+import { HRServices } from "@/components/hr/HRServices";
 import { HRFAQ } from "@/components/hr/HRFAQ";
 import { PricingPlans } from "@/components/local-seo/PricingPlans";
 import { GoogleAdsPlans } from "@/components/digital-ads/pricing/GoogleAdsPlans";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const HRServices = () => {
+const HRServicesPage = () => {
   return (
     <>
       <HRSchema />
@@ -17,6 +18,7 @@ const HRServices = () => {
       <main className="min-h-screen bg-background">
         <HRBreadcrumbs />
         <HRHero />
+        <HRServices />
         
         {/* Planes SEO Local */}
         <section className="py-24 bg-muted/50">
@@ -73,4 +75,4 @@ const HRServices = () => {
   );
 };
 
-export default HRServices;
+export default HRServicesPage;
