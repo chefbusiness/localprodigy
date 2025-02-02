@@ -2,8 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { WhatsAppWidget } from "@/components/WhatsAppWidget";
+import { useEffect } from "react";
 import Index from "@/pages/Index";
 import Contact from "@/pages/Contact";
 import Services from "@/pages/Services";
@@ -19,17 +20,31 @@ import DentalClinics from "@/pages/sectors/professional-services/DentalClinics";
 import LegalServices from "@/pages/sectors/professional-services/LegalServices";
 import ConsultancyServices from "@/pages/sectors/professional-services/ConsultancyServices";
 import PsychologyServices from "@/pages/sectors/professional-services/PsychologyServices";
+import VeterinaryServices from "@/pages/sectors/professional-services/VeterinaryServices";
+import ArchitectServices from "@/pages/sectors/professional-services/ArchitectServices";
+import RealEstateServices from "@/pages/sectors/professional-services/RealEstateServices";
 import LocalRetail from "@/pages/sectors/LocalRetail";
 import HomeServices from "@/pages/sectors/HomeServices";
 import Automotive from "@/pages/sectors/Automotive";
 
 const queryClient = new QueryClient();
 
+function ScrollToTop() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  
+  return null;
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Router>
+          <ScrollToTop />
           <Toaster />
           <Sonner />
           <Routes>
@@ -51,6 +66,9 @@ function App() {
             <Route path="/sectores/servicios-profesionales/abogados" element={<LegalServices />} />
             <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
             <Route path="/sectores/servicios-profesionales/psicologos" element={<PsychologyServices />} />
+            <Route path="/sectores/servicios-profesionales/veterinarias" element={<VeterinaryServices />} />
+            <Route path="/sectores/servicios-profesionales/arquitectos" element={<ArchitectServices />} />
+            <Route path="/sectores/servicios-profesionales/inmobiliarias" element={<RealEstateServices />} />
           </Routes>
           <WhatsAppWidget />
         </Router>

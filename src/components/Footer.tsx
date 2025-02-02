@@ -1,8 +1,16 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <footer className="bg-primary text-white">
@@ -67,14 +75,14 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/casos-exito" className="text-gray-300 hover:text-white transition-colors">
                   Casos de Éxito
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/contacto" className="text-gray-300 hover:text-white transition-colors">

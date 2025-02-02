@@ -2,9 +2,10 @@ import { Helmet } from "react-helmet";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import { useEffect } from "react";
 
 interface Service {
   title: string;
@@ -37,7 +38,7 @@ interface BusinessLandingPageProps {
     answer: string;
   }[];
   callToAction: CallToAction;
-  children?: React.ReactNode; // Add this line
+  children?: React.ReactNode;
 }
 
 export const BusinessLandingPage = ({
@@ -49,8 +50,14 @@ export const BusinessLandingPage = ({
   benefits,
   faqSchema,
   callToAction,
-  children, // Add this line
+  children,
 }: BusinessLandingPageProps) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   // Schema.org markup
   const schemaData = {
     "@context": "https://schema.org",
