@@ -23,6 +23,7 @@ import PsychologyServices from "@/pages/sectors/professional-services/Psychology
 import VeterinaryServices from "@/pages/sectors/professional-services/VeterinaryServices";
 import ArchitectServices from "@/pages/sectors/professional-services/ArchitectServices";
 import RealEstateServices from "@/pages/sectors/professional-services/RealEstateServices";
+import HRServices from "@/pages/sectors/professional-services/HRServices";
 import LocalRetail from "@/pages/sectors/LocalRetail";
 import HomeServices from "@/pages/sectors/HomeServices";
 import Automotive from "@/pages/sectors/Automotive";
@@ -69,6 +70,7 @@ function App() {
             <Route path="/sectores/servicios-profesionales/veterinarias" element={<VeterinaryServices />} />
             <Route path="/sectores/servicios-profesionales/arquitectos" element={<ArchitectServices />} />
             <Route path="/sectores/servicios-profesionales/inmobiliarias" element={<RealEstateServices />} />
+            <Route path="/sectores/servicios-profesionales/recursos-humanos" element={<HRServices />} />
           </Routes>
           <WhatsAppWidget />
         </Router>
