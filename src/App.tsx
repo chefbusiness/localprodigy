@@ -2,8 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { WhatsAppWidget } from "@/components/WhatsAppWidget";
+import { useEffect } from "react";
 import Index from "@/pages/Index";
 import Contact from "@/pages/Contact";
 import Services from "@/pages/Services";
@@ -26,11 +27,23 @@ import Automotive from "@/pages/sectors/Automotive";
 
 const queryClient = new QueryClient();
 
+// Componente para manejar el scroll
+function ScrollToTop() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  
+  return null;
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Router>
+          <ScrollToTop />
           <Toaster />
           <Sonner />
           <Routes>
