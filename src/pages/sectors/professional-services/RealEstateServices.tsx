@@ -10,7 +10,7 @@ import { GoogleAdsPlans } from "@/components/digital-ads/pricing/GoogleAdsPlans"
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const RealEstateServices = () => {
+const RealEstatePage = () => {
   return (
     <>
       <RealEstateSchema />
@@ -69,4 +69,4 @@ const RealEstateServices = () => {
   );
 };
 
-export default RealEstateServices;
+export default RealEstatePage;
