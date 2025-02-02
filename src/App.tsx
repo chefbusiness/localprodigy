@@ -21,13 +21,13 @@ import LegalServices from "@/pages/sectors/professional-services/LegalServices";
 import ConsultancyServices from "@/pages/sectors/professional-services/ConsultancyServices";
 import PsychologyServices from "@/pages/sectors/professional-services/PsychologyServices";
 import VeterinaryServices from "@/pages/sectors/professional-services/VeterinaryServices";
+import ArchitectServices from "@/pages/sectors/professional-services/ArchitectServices";
 import LocalRetail from "@/pages/sectors/LocalRetail";
 import HomeServices from "@/pages/sectors/HomeServices";
 import Automotive from "@/pages/sectors/Automotive";
 
 const queryClient = new QueryClient();
 
-// Componente para manejar el scroll
 function ScrollToTop() {
   const location = useLocation();
   
@@ -66,6 +66,7 @@ function App() {
             <Route path="/sectores/servicios-profesionales/asesorias" element={<ConsultancyServices />} />
             <Route path="/sectores/servicios-profesionales/psicologos" element={<PsychologyServices />} />
             <Route path="/sectores/servicios-profesionales/veterinarias" element={<VeterinaryServices />} />
+            <Route path="/sectores/servicios-profesionales/arquitectos" element={<ArchitectServices />} />
           </Routes>
           <WhatsAppWidget />
         </Router>
