@@ -68,7 +68,7 @@ function App() {
             <Route path="/sectores/servicios-profesionales/psicologos" element={<PsychologyServices />} />
             <Route path="/sectores/servicios-profesionales/veterinarias" element={<VeterinaryServices />} />
             <Route path="/sectores/servicios-profesionales/arquitectos" element={<ArchitectServices />} />
-            <Route path="/sectores/servicios-profesionales/agentes-inmobiliarios" element={<RealEstateServices />} />
+            <Route path="/sectores/servicios-profesionales/inmobiliarias" element={<RealEstateServices />} />
           </Routes>
           <WhatsAppWidget />
         </Router>
